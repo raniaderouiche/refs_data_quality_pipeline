@@ -1,0 +1,7 @@
+check,check_level,check_status,constraint,constraint_status,constraint_message
+Data Quality Checks,Error,Error,"CompletenessConstraint(Completeness(NAME,None,None))",Success,""
+Data Quality Checks,Error,Error,"CompletenessConstraint(Completeness(LEVEL_NAME,None,None))",Failure,Value: 0.9587796925943176 does not meet the constraint requirement!
+Data Quality Checks,Error,Error,"CompletenessConstraint(Completeness(HIERARCHY,None,None))",Failure,Value: 0.9708119857165036 does not meet the constraint requirement!
+Data Quality Checks,Error,Error,"DistinctnessConstraint(Distinctness(Stream(NAME, ?),None))",Success,""
+Data Quality Checks,Error,Error,"ApproxCountDistinctConstraint(ApproxCountDistinct(NAME,None))",Success,""
+Data Quality Checks,Error,Error,"PatternMatchConstraint(HIERARCHY, your_regex_here)",Failure,Value: 0.0 does not meet the constraint requirement!

@@ -2,6 +2,10 @@ dagster
 dagster-dbt
 dbt-core
 pyspark
-pydeequ==1.1.0
+pydeequ
 dbt-snowflake
 dagster-spark
+pandas
+torch
+sentence_transformers
+scikit-learn

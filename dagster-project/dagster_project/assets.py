@@ -11,6 +11,7 @@ from dagster import AssetExecutionContext
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
 from deequ.preprocessing import import_data, check_data
+from scripts.anomalies_detection import detect_anomalies
 
 @asset
 def run_spark_job():
@@ -19,6 +20,10 @@ def run_spark_job():
 @dbt_assets(manifest=ref_dq.manifest_path)
 def ref_dq_dbt_assets(context: AssetExecutionContext, dbt: DbtCliResource):
     yield from dbt.cli(["build"], context=context).stream()
+
+@asset
+def run_py_script():
+    detect_anomalies()
 
 # @asset(ins={"dbt_output": AssetIn(key="locations")})
 # def run_spark_job(dbt_output):
