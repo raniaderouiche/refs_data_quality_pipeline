@@ -1,0 +1,7 @@
+node_modules/
+*.log
+.env
+dist/
+/venv
+.idea
+.tmp_dagster_home_*

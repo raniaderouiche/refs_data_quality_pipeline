@@ -1,0 +1,13 @@
+ref_dq:
+  outputs:
+    dev:
+      account: TOTNOPJ-JU30958
+      database: LOCATIONS_REFS
+      password: W77Sbk4sZcARz8J
+      role: ACCOUNTADMIN
+      schema: LOCATIONS
+      threads: 2
+      type: snowflake
+      user: RANIADER
+      warehouse: COMPUTE_WH
+  target: dev

@@ -1,0 +1,29 @@
+[project]
+name = "dagster_project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9,<3.13"
+dependencies = [
+    "dagster",
+    "dagster-cloud",
+    "dagster-dbt",
+    "dbt-snowflake<1.10",
+]
+
+[project.optional-dependencies]
+dev = [
+    "dagster-webserver", 
+    "pytest",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.dagster]
+module_name = "dagster_project.definitions"
+code_location_name = "dagster_project"
+
+[tool.setuptools.packages.find]
+exclude=["dagster_project_tests"]

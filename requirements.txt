@@ -1,0 +1,7 @@
+dagster
+dagster-dbt
+dbt-core
+pyspark
+pydeequ==1.1.0
+dbt-snowflake
+dagster-spark
