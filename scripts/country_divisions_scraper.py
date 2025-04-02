@@ -2,7 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-def scrape_wikipedia_table(url, table_index=0):
+
+def scrape_wikipedia_table(table_index=0):
+    url = "https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country"
     response = requests.get(url)
     if response.status_code != 200:
         print("Failed to retrieve the webpage")
@@ -16,18 +18,24 @@ def scrape_wikipedia_table(url, table_index=0):
         return None
     
     table = tables[table_index]
-    headers = [th.text.strip() for th in table.find_all("th")]
+    
+    header_rows = table.find_all("tr")[:2]
+    headers = []
+    first_row_headers = [th.text.strip() for th in header_rows[0].find_all("th")]
+    second_row_headers = [th.text.strip() for th in header_rows[1].find_all("th")]
+    
+    headers.extend(first_row_headers[:2]) 
+    headers.extend(second_row_headers)  
+    
     rows = []
-    for tr in table.find_all("tr")[1:]:  # Skip header row
+    for tr in table.find_all("tr")[2:]:  # Skip header rows
         cells = [td.text.strip() for td in tr.find_all("td")]
         if cells:
+            while len(cells) < len(headers):
+                cells.append('')
+            while len(cells) > len(headers):
+                cells = cells[:len(headers)]
             rows.append(cells)
     
     df = pd.DataFrame(rows, columns=headers)
     return df
-
-# Example usage
-url = "https://en.wikipedia.org/wiki/List_of_countries_by_population_(United_Nations)"
-df = scrape_wikipedia_table(url)
-if df is not None:
-    print(df.head())
