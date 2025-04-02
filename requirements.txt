@@ -9,3 +9,8 @@ pandas
 torch
 sentence_transformers
 scikit-learn
+fuzzywuzzy
+sentence_transformers
+matplotlib
+seaborn
+bs4

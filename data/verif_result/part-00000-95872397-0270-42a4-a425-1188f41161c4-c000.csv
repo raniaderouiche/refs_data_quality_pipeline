@@ -4,4 +4,4 @@ Data Quality Checks,Error,Error,"CompletenessConstraint(Completeness(LEVEL_NAME,
 Data Quality Checks,Error,Error,"CompletenessConstraint(Completeness(HIERARCHY,None,None))",Failure,Value: 0.9708119857165036 does not meet the constraint requirement!
 Data Quality Checks,Error,Error,"DistinctnessConstraint(Distinctness(Stream(NAME, ?),None))",Success,""
 Data Quality Checks,Error,Error,"ApproxCountDistinctConstraint(ApproxCountDistinct(NAME,None))",Success,""
-Data Quality Checks,Error,Error,"PatternMatchConstraint(HIERARCHY, your_regex_here)",Failure,Value: 0.0 does not meet the constraint requirement!
+Data Quality Checks,Error,Error,"PatternMatchConstraint(HIERARCHY, ^ALL#WORLD#([A-Z]+#)*[A-Z]+$)",Failure,Value: 0.5711069709672411 does not meet the constraint requirement!

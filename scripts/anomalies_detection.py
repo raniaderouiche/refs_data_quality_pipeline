@@ -3,10 +3,7 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer, util
 from sklearn.metrics.pairwise import cosine_similarity
 
-def detect_anomalies():
-
-    # Load dataset
-    df = pd.read_csv("C:/Users/Rania/Documents/PFE/refs_data_quality_pipeline/data/DNEXR.REFERENCE.location.csv")
+def detect_anomalies(df):
 
     allowed_values = {"COUNTRY", "CITY", "PORT_TERMINAL"}
 
