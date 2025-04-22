@@ -5,12 +5,16 @@ from sentence_transformers import SentenceTransformer, util
 
 def bert(data):
     df = data.copy()
-    df.drop(columns=["LEVELS_REMOVED"], inplace=True)
-    # Select relevant columns for similarity check
-    # df["text"] = df[["NAME", "HIERARCHY", "LEVEL_NAME"]].astype(str).agg(" ".join, axis=1)
 
+    df["HIERARCHY"] = df.apply(
+        lambda row: "#".join(row["HIERARCHY"].split("#")[:-1]) if row["HIERARCHY"].endswith("#" + str(row["CODE"])) else row["HIERARCHY"],
+        axis=1
+    )
     # Select relevant columns for similarity check (after comparison with static search)
-    df["text"] = df[["NAME", "LEVEL_NAME"]].astype(str).agg(" ".join, axis=1)
+    # df["text"] = df[["NAME", "PARENT" , "LEVEL_NAME", "HIERARCHY"]].astype(str).agg(" ".join, axis=1)
+
+    df["text"] = df[["NAME", "OFFICIAL_LEVEL_NAME" , "PARENT", "LEVEL_NUMBER"]].astype(str).agg(" - ".join, axis=1)
+
 
     # Load DistilBERT model
     model = SentenceTransformer("distilbert-base-nli-stsb-mean-tokens")
@@ -22,7 +26,7 @@ def bert(data):
     similarity_matrix = util.pytorch_cos_sim(embeddings, embeddings)
 
     # Set similarity threshold
-    threshold = 0.96  # Adjust as needed
+    threshold = 0.99  # Adjust as needed
 
     # Identify duplicates
     visited = set()
@@ -47,5 +51,5 @@ def bert(data):
         final_df = pd.concat([final_df, first_occurrence, remaining], ignore_index=True)
 
     final_df.drop(columns=["text"], inplace=True)
-    print(final_df)
+    final_df.to_csv("../data/results/duplicates.csv", index=False)
     return final_df

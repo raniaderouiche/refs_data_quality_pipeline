@@ -1,0 +1,2175 @@
+[
+    {
+        "country": "Andorra",
+        "level_1": [
+            "parish",
+            "port_terminal"
+        ],
+        "code": "AND",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "United Arab Emirates",
+        "level_1": [
+            "emirate",
+            "port_terminal"
+        ],
+        "code": "ARE",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Afghanistan",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "AFG",
+        "level_2": "district",
+        "level_3": "subdistrict",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Antigua and Barbuda",
+        "level_1": [
+            "parish",
+            "dependency",
+            "port_terminal"
+        ],
+        "code": "ATG",
+        "level_2": "major division",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Albania",
+        "level_1": [
+            "county",
+            "port_terminal"
+        ],
+        "code": "ALB",
+        "level_2": "municipality",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Armenia",
+        "level_1": [
+            "city",
+            "region",
+            "port_terminal"
+        ],
+        "code": "ARM",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Angola",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "AGO",
+        "level_2": "municipality",
+        "level_3": "commune",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Argentina",
+        "level_1": [
+            "city",
+            "province",
+            "port_terminal"
+        ],
+        "code": "ARG",
+        "level_2": "department",
+        "continent_name": "South America"
+    },
+    {
+        "country": "Austria",
+        "level_1": [
+            "state",
+            "port_terminal"
+        ],
+        "code": "AUT",
+        "level_2": "district",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Australia",
+        "level_1": [
+            "state",
+            "territory",
+            "port_terminal"
+        ],
+        "code": "AUS",
+        "level_2": "local government area",
+        "continent_name": "Oceania"
+    },
+    {
+        "country": "Azerbaijan",
+        "level_1": [
+            "autonomous republic",
+            "municipality",
+            "rayon",
+            "port_terminal"
+        ],
+        "code": "AZE",
+        "level_2": "municipality",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Bosnia and Herzegovina",
+        "level_1": [
+            "entity",
+            "district with special statu",
+            "port_terminal"
+        ],
+        "code": "BIH",
+        "level_2": "canton",
+        "level_3": "municipality",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Barbados",
+        "level_1": [
+            "parish",
+            "port_terminal"
+        ],
+        "code": "BRB",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Bangladesh",
+        "level_1": [
+            "division",
+            "district",
+            "port_terminal"
+        ],
+        "code": "BGD",
+        "level_2": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Belgium",
+        "level_1": [
+            "region",
+            "province",
+            "port_terminal"
+        ],
+        "code": "BEL",
+        "level_2": "province",
+        "level_3": "arrondissement",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Burkina Faso",
+        "level_1": [
+            "region",
+            "province",
+            "port_terminal"
+        ],
+        "code": "BFA",
+        "level_2": "province",
+        "level_3": "department",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Bulgaria",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "BGR",
+        "level_2": "municipality",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Bahrain",
+        "level_1": [
+            "governorate",
+            "port_terminal"
+        ],
+        "code": "BHR",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Burundi",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "BDI",
+        "level_2": "commune",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Benin",
+        "level_1": [
+            "department",
+            "port_terminal"
+        ],
+        "code": "BEN",
+        "level_2": "commune",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Brunei Darussalam",
+        "level_1": [
+            "district",
+            "port_terminal"
+        ],
+        "code": "BRN",
+        "level_3": "village",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Bolivia",
+        "level_1": [
+            "department",
+            "port_terminal"
+        ],
+        "code": "BOL",
+        "level_2": "province",
+        "level_3": "municipality",
+        "continent_name": "South America"
+    },
+    {
+        "country": "Bonaire, Sint Eustatius and Saba",
+        "level_1": [
+            "special municipality",
+            "port_terminal"
+        ],
+        "code": "BES",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Brazil",
+        "level_1": [
+            "federal district",
+            "state",
+            "port_terminal"
+        ],
+        "code": "BRA",
+        "level_2": "municipality",
+        "continent_name": "South America"
+    },
+    {
+        "country": "Bahamas",
+        "level_1": [
+            "district",
+            "island",
+            "port_terminal"
+        ],
+        "code": "BHS",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Bhutan",
+        "level_1": [
+            "district",
+            "port_terminal"
+        ],
+        "code": "BTN",
+        "level_2": "gewog",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Botswana",
+        "level_1": [
+            "district",
+            "town",
+            "city",
+            "port_terminal"
+        ],
+        "code": "BWA",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Belarus",
+        "level_1": [
+            "oblast",
+            "city",
+            "port_terminal"
+        ],
+        "code": "BLR",
+        "level_2": "district",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Belize",
+        "level_1": [
+            "district",
+            "port_terminal"
+        ],
+        "code": "BLZ",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Canada",
+        "level_1": [
+            "province",
+            "territory",
+            "port_terminal"
+        ],
+        "code": "CAN",
+        "level_2": "census division",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Congo, The Democratic Republic of the",
+        "level_1": [
+            "city",
+            "province",
+            "port_terminal"
+        ],
+        "code": "COD",
+        "level_2": "district",
+        "level_3": "commune",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Central African Republic",
+        "level_1": [
+            "commune",
+            "prefecture",
+            "economic prefecture",
+            "port_terminal"
+        ],
+        "code": "CAF",
+        "level_2": "sub-prefecture",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Congo",
+        "level_1": [
+            "department",
+            "port_terminal"
+        ],
+        "code": "COG",
+        "level_2": "district",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Switzerland",
+        "level_1": [
+            "canton",
+            "port_terminal"
+        ],
+        "code": "CHE",
+        "level_2": "district",
+        "level_3": "municipality",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Côte d'Ivoire",
+        "level_1": [
+            "district",
+            "autonomous district",
+            "port_terminal"
+        ],
+        "code": "CIV",
+        "level_2": "region",
+        "level_3": "department",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Chile",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "CHL",
+        "level_2": "province",
+        "level_3": "partido",
+        "continent_name": "South America"
+    },
+    {
+        "country": "Cameroon",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "CMR",
+        "level_2": "department",
+        "level_3": "commune",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "China",
+        "level_1": [
+            "municipality",
+            "province",
+            "autonomous region",
+            "special administrative region",
+            "port_terminal"
+        ],
+        "code": "CHN",
+        "level_2": "prefecture-level division",
+        "level_3": "county-level division",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Colombia",
+        "level_1": [
+            "capital district",
+            "department",
+            "port_terminal"
+        ],
+        "code": "COL",
+        "level_2": "municipality",
+        "level_3": "corregimiento",
+        "continent_name": "South America"
+    },
+    {
+        "country": "Costa Rica",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "CRI",
+        "level_2": "canton",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Cuba",
+        "level_1": [
+            "province",
+            "special municipality",
+            "port_terminal"
+        ],
+        "code": "CUB",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Cabo Verde",
+        "level_1": [
+            "geographical region",
+            "municipality",
+            "port_terminal"
+        ],
+        "code": "CPV",
+        "level_2": "parish",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Curacao",
+        "level_1": [
+            "district",
+            "port_terminal"
+        ],
+        "code": "CUW",
+        "continent_name": "South America"
+    },
+    {
+        "country": "Cyprus",
+        "level_1": [
+            "district",
+            "port_terminal"
+        ],
+        "code": "CYP",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Czechia",
+        "level_1": [
+            "region",
+            "capital city",
+            "district",
+            "port_terminal"
+        ],
+        "code": "CZE",
+        "level_2": "district",
+        "level_3": "municipality",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Germany",
+        "level_1": [
+            "state",
+            "port_terminal"
+        ],
+        "code": "DEU",
+        "level_2": "district",
+        "level_3": "municipality",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Djibouti",
+        "level_1": [
+            "region",
+            "city",
+            "port_terminal"
+        ],
+        "code": "DJI",
+        "level_2": "district",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Denmark",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "DNK",
+        "level_2": "municipality",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Dominica",
+        "level_1": [
+            "parish",
+            "port_terminal"
+        ],
+        "code": "DMA",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Dominican Republic",
+        "level_1": [
+            "region",
+            "district",
+            "province",
+            "port_terminal"
+        ],
+        "code": "DOM",
+        "level_2": "municipality",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Algeria",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "DZA",
+        "level_2": "commune",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Ecuador",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "ECU",
+        "level_2": "canton",
+        "level_3": "parish",
+        "continent_name": "South America"
+    },
+    {
+        "country": "Estonia",
+        "level_1": [
+            "county",
+            "rural municipality",
+            "urban municipality",
+            "port_terminal"
+        ],
+        "code": "EST",
+        "level_2": "municipality",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Egypt",
+        "level_1": [
+            "governorate",
+            "port_terminal"
+        ],
+        "code": "EGY",
+        "level_2": "region",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Eritrea",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "ERI",
+        "level_2": "subregion",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Spain",
+        "level_1": [
+            "autonomous community",
+            "autonomous cities in North Africa",
+            "province",
+            "port_terminal"
+        ],
+        "code": "ESP",
+        "level_2": "province",
+        "level_3": "comarca",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Ethiopia",
+        "level_1": [
+            "administration",
+            "regional state",
+            "port_terminal"
+        ],
+        "code": "ETH",
+        "level_2": "zone",
+        "level_3": "district",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Finland",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "FIN",
+        "level_3": "municipality",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Fiji",
+        "level_1": [
+            "division",
+            "dependency",
+            "province",
+            "port_terminal"
+        ],
+        "code": "FJI",
+        "level_2": "province",
+        "continent_name": "Oceania"
+    },
+    {
+        "country": "Micronesia, Federated States of",
+        "level_1": [
+            "state",
+            "port_terminal"
+        ],
+        "code": "FSM",
+        "continent_name": "Oceania"
+    },
+    {
+        "country": "France",
+        "level_1": [
+            "metropolitan region",
+            "overseas collectivity",
+            "overseas collectivity with special statu",
+            "dependency",
+            "overseas departmental collectivity",
+            "overseas territory",
+            "overseas unique territorial collectivity",
+            "metropolitan department",
+            "metropolitan collectivities with special statu",
+            "European collectivity",
+            "port_terminal"
+        ],
+        "code": "FRA",
+        "level_2": "department",
+        "level_3": "arrondissement",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Gabon",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "GAB",
+        "level_2": "department",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "United Kingdom",
+        "level_1": [
+            "district",
+            "country",
+            "province",
+            "council area",
+            "unitary authority",
+            "metropolitan district",
+            "London borough",
+            "city corporation",
+            "port_terminal"
+        ],
+        "code": "GBR",
+        "level_2": "county",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Grenada",
+        "level_1": [
+            "parish",
+            "dependency",
+            "port_terminal"
+        ],
+        "code": "GRD",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Georgia",
+        "level_1": [
+            "autonomous republic",
+            "city",
+            "region",
+            "port_terminal"
+        ],
+        "code": "GEO",
+        "level_2": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Ghana",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "GHA",
+        "level_2": "district",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Greenland",
+        "level_1": [
+            "municipality",
+            "port_terminal"
+        ],
+        "code": "GRL",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Gambia",
+        "level_1": [
+            "city",
+            "division",
+            "port_terminal"
+        ],
+        "code": "GMB",
+        "level_2": "district",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Guinea",
+        "level_1": [
+            "administrative region",
+            "governorate",
+            "prefecture",
+            "port_terminal"
+        ],
+        "code": "GIN",
+        "level_2": "prefecture",
+        "level_3": "sub-prefecture",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Equatorial Guinea",
+        "level_1": [
+            "region",
+            "province",
+            "port_terminal"
+        ],
+        "code": "GNQ",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Greece",
+        "level_1": [
+            "administrative region",
+            "port_terminal"
+        ],
+        "code": "GRC",
+        "level_2": "regional unit",
+        "level_3": "municipality",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Guatemala",
+        "level_1": [
+            "department",
+            "port_terminal"
+        ],
+        "code": "GTM",
+        "level_2": "municipality",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Guinea-Bissau",
+        "level_1": [
+            "province",
+            "autonomous sector",
+            "region",
+            "port_terminal"
+        ],
+        "code": "GNB",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Guyana",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "GUY",
+        "continent_name": "South America"
+    },
+    {
+        "country": "Honduras",
+        "level_1": [
+            "department",
+            "port_terminal"
+        ],
+        "code": "HND",
+        "level_2": "municipality",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Croatia",
+        "level_1": [
+            "city",
+            "county",
+            "port_terminal"
+        ],
+        "code": "HRV",
+        "level_2": "municipality",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Haiti",
+        "level_1": [
+            "department",
+            "port_terminal"
+        ],
+        "code": "HTI",
+        "level_2": "arrondissement",
+        "level_3": "commune",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Hungary",
+        "level_1": [
+            "capital city",
+            "county",
+            "cities of county right",
+            "port_terminal"
+        ],
+        "code": "HUN",
+        "level_2": "district",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Indonesia",
+        "level_1": [
+            "geographical unit",
+            "province",
+            "capital district",
+            "special region",
+            "port_terminal"
+        ],
+        "code": "IDN",
+        "level_2": "regency",
+        "level_3": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Ireland",
+        "level_1": [
+            "province",
+            "county",
+            "port_terminal"
+        ],
+        "code": "IRL",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Israel",
+        "level_1": [
+            "district",
+            "port_terminal"
+        ],
+        "code": "ISR",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "India",
+        "level_1": [
+            "state",
+            "union territory",
+            "port_terminal"
+        ],
+        "code": "IND",
+        "level_2": "division",
+        "level_3": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Iraq",
+        "level_1": [
+            "region",
+            "governorate",
+            "port_terminal"
+        ],
+        "code": "IRQ",
+        "level_2": "district",
+        "level_3": "subdistrict",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Iran",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "IRN",
+        "level_2": "county",
+        "level_3": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Iceland",
+        "level_1": [
+            "region",
+            "municipality",
+            "port_terminal"
+        ],
+        "code": "ISL",
+        "level_2": "county",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Italy",
+        "level_1": [
+            "region",
+            "autonomous region",
+            "province",
+            "autonomous province",
+            "free municipal consortium",
+            "metropolitan city",
+            "decentralized regional entity",
+            "port_terminal"
+        ],
+        "code": "ITA",
+        "level_2": "province",
+        "level_3": "municipality",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Jamaica",
+        "level_1": [
+            "parish",
+            "port_terminal"
+        ],
+        "code": "JAM",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Jordan",
+        "level_1": [
+            "governorate",
+            "port_terminal"
+        ],
+        "code": "JOR",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Japan",
+        "level_1": [
+            "prefecture",
+            "port_terminal"
+        ],
+        "code": "JPN",
+        "level_2": "subprefecture",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Kenya",
+        "level_1": [
+            "county",
+            "port_terminal"
+        ],
+        "code": "KEN",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Kyrgyzstan",
+        "level_1": [
+            "city",
+            "region",
+            "port_terminal"
+        ],
+        "code": "KGZ",
+        "level_2": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Cambodia",
+        "level_1": [
+            "autonomous municipality",
+            "province",
+            "port_terminal"
+        ],
+        "code": "KHM",
+        "level_2": "district",
+        "level_3": "commune",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Kiribati",
+        "level_1": [
+            "groups of island",
+            "port_terminal"
+        ],
+        "code": "KIR",
+        "continent_name": "Oceania"
+    },
+    {
+        "country": "Comoros",
+        "level_1": [
+            "island",
+            "port_terminal"
+        ],
+        "code": "COM",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Saint Kitts and Nevis",
+        "level_1": [
+            "state",
+            "parish",
+            "port_terminal"
+        ],
+        "code": "KNA",
+        "continent_name": "North America"
+    },
+    {
+        "country": "North Korea",
+        "level_1": [
+            "capital city",
+            "metropolitan city",
+            "special city",
+            "province",
+            "port_terminal"
+        ],
+        "code": "PRK",
+        "level_2": "county",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "South Korea",
+        "level_1": [
+            "metropolitan city",
+            "special city",
+            "province",
+            "port_terminal"
+        ],
+        "code": "KOR",
+        "level_2": "county",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Kuwait",
+        "level_1": [
+            "governorate",
+            "port_terminal"
+        ],
+        "code": "KWT",
+        "level_2": "area",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Kazakhstan",
+        "level_1": [
+            "city",
+            "region",
+            "port_terminal"
+        ],
+        "code": "KAZ",
+        "level_2": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Laos",
+        "level_1": [
+            "prefecture",
+            "province",
+            "port_terminal"
+        ],
+        "code": "LAO",
+        "level_2": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Lebanon",
+        "level_1": [
+            "governorate",
+            "port_terminal"
+        ],
+        "code": "LBN",
+        "level_2": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Saint Lucia",
+        "level_1": [
+            "district",
+            "port_terminal"
+        ],
+        "code": "LCA",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Liechtenstein",
+        "level_1": [
+            "commune",
+            "port_terminal"
+        ],
+        "code": "LIE",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Sri Lanka",
+        "level_1": [
+            "province",
+            "district",
+            "port_terminal"
+        ],
+        "code": "LKA",
+        "level_2": "district",
+        "level_3": "divisional secretariat",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Liberia",
+        "level_1": [
+            "county",
+            "port_terminal"
+        ],
+        "code": "LBR",
+        "level_2": "district",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Lesotho",
+        "level_1": [
+            "district",
+            "port_terminal"
+        ],
+        "code": "LSO",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Lithuania",
+        "level_1": [
+            "county",
+            "municipality",
+            "city municipality",
+            "district municipality",
+            "port_terminal"
+        ],
+        "code": "LTU",
+        "level_2": "county",
+        "level_3": "municipality",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Luxembourg",
+        "level_1": [
+            "canton",
+            "port_terminal"
+        ],
+        "code": "LUX",
+        "level_2": "canton",
+        "level_3": "commune",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Latvia",
+        "level_1": [
+            "municipality",
+            "state city",
+            "port_terminal"
+        ],
+        "code": "LVA",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Libya",
+        "level_1": [
+            "popularate",
+            "port_terminal"
+        ],
+        "code": "LBY",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Morocco",
+        "level_1": [
+            "region",
+            "province",
+            "prefecture",
+            "port_terminal"
+        ],
+        "code": "MAR",
+        "level_2": "prefectures and province",
+        "level_3": "municipality",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Monaco",
+        "level_1": [
+            "quarter",
+            "port_terminal"
+        ],
+        "code": "MCO",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Moldova",
+        "level_1": [
+            "autonomous territorial unit",
+            "city",
+            "district",
+            "territorial unit",
+            "port_terminal"
+        ],
+        "code": "MDA",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Montenegro",
+        "level_1": [
+            "municipality",
+            "port_terminal"
+        ],
+        "code": "MNE",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Madagascar",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "MDG",
+        "level_2": "district",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Marshall Islands",
+        "level_1": [
+            "chains of island",
+            "municipality",
+            "port_terminal"
+        ],
+        "code": "MHL",
+        "continent_name": "Oceania"
+    },
+    {
+        "country": "North Macedonia",
+        "level_1": [
+            "municipality",
+            "port_terminal"
+        ],
+        "code": "MKD",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Mali",
+        "level_1": [
+            "district",
+            "region",
+            "port_terminal"
+        ],
+        "code": "MLI",
+        "level_2": "cercle",
+        "level_3": "arrondissement",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Myanmar",
+        "level_1": [
+            "region",
+            "state",
+            "union territory",
+            "port_terminal"
+        ],
+        "code": "MMR",
+        "level_2": "district",
+        "level_3": "township",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Mongolia",
+        "level_1": [
+            "capital city",
+            "province",
+            "port_terminal"
+        ],
+        "code": "MNG",
+        "level_2": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Mauritania",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "MRT",
+        "level_2": "department",
+        "level_3": "commune",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Malta",
+        "level_1": [
+            "local council",
+            "port_terminal"
+        ],
+        "code": "MLT",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Mauritius",
+        "level_1": [
+            "dependency",
+            "district",
+            "port_terminal"
+        ],
+        "code": "MUS",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Maldives",
+        "level_1": [
+            "administrative atoll",
+            "city",
+            "port_terminal"
+        ],
+        "code": "MDV",
+        "level_2": "administrative atoll",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Malawi",
+        "level_1": [
+            "region",
+            "district",
+            "port_terminal"
+        ],
+        "code": "MWI",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Mexico",
+        "level_1": [
+            "state",
+            "federal entity",
+            "port_terminal"
+        ],
+        "code": "MEX",
+        "level_2": "municipality",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Malaysia",
+        "level_1": [
+            "federal territory",
+            "state",
+            "port_terminal"
+        ],
+        "code": "MYS",
+        "level_2": "district",
+        "level_3": "mukim",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Mozambique",
+        "level_1": [
+            "city",
+            "province",
+            "port_terminal"
+        ],
+        "code": "MOZ",
+        "level_2": "district",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Namibia",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "NAM",
+        "level_2": "constituency",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Nigeria",
+        "level_1": [
+            "urban community",
+            "department",
+            "port_terminal"
+        ],
+        "code": "NGA",
+        "level_2": "local government area",
+        "level_3": "commune",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Nigeria",
+        "level_1": [
+            "capital territory",
+            "state",
+            "port_terminal"
+        ],
+        "code": "NGA",
+        "level_2": "local government area",
+        "level_3": "commune",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Nicaragua",
+        "level_1": [
+            "department",
+            "autonomous region",
+            "port_terminal"
+        ],
+        "code": "NIC",
+        "level_2": "municipality",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Netherlands",
+        "level_1": [
+            "province",
+            "country",
+            "special municipality",
+            "port_terminal"
+        ],
+        "code": "NLD",
+        "level_2": "municipality",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Norway",
+        "level_1": [
+            "county",
+            "arctic region",
+            "port_terminal"
+        ],
+        "code": "NOR",
+        "level_2": "municipality",
+        "level_3": "borough",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Nepal",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "NPL",
+        "level_2": "district",
+        "level_3": "rural municipality",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Nauru",
+        "level_1": [
+            "district",
+            "port_terminal"
+        ],
+        "code": "NRU",
+        "continent_name": "Oceania"
+    },
+    {
+        "country": "New Zealand",
+        "level_1": [
+            "region",
+            "special island authority",
+            "port_terminal"
+        ],
+        "code": "NZL",
+        "level_2": "territorial authority",
+        "continent_name": "Oceania"
+    },
+    {
+        "country": "Oman",
+        "level_1": [
+            "governorate",
+            "port_terminal"
+        ],
+        "code": "OMN",
+        "level_2": "province",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Panama",
+        "level_1": [
+            "province",
+            "indigenous region",
+            "port_terminal"
+        ],
+        "code": "PAN",
+        "level_2": "district",
+        "level_3": "corregimiento",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Peru",
+        "level_1": [
+            "region",
+            "municipality",
+            "port_terminal"
+        ],
+        "code": "PER",
+        "level_2": "province",
+        "level_3": "district",
+        "continent_name": "South America"
+    },
+    {
+        "country": "Papua New Guinea",
+        "level_1": [
+            "district",
+            "province",
+            "autonomous region",
+            "port_terminal"
+        ],
+        "code": "PNG",
+        "level_2": "district",
+        "level_3": "local-level government",
+        "continent_name": "Oceania"
+    },
+    {
+        "country": "Philippines",
+        "level_1": [
+            "region",
+            "province",
+            "port_terminal"
+        ],
+        "code": "PHL",
+        "level_2": "municipality",
+        "level_3": "barangay",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Pakistan",
+        "level_1": [
+            "province",
+            "autonomous territory",
+            "federal territory",
+            "port_terminal"
+        ],
+        "code": "PAK",
+        "level_2": "division",
+        "level_3": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Poland",
+        "level_1": [
+            "voivodship",
+            "port_terminal"
+        ],
+        "code": "POL",
+        "level_2": "county",
+        "level_3": "gmina",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Palestine, State of",
+        "level_1": [
+            "governorate",
+            "port_terminal"
+        ],
+        "code": "PSE",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Portugal",
+        "level_1": [
+            "district",
+            "autonomous region",
+            "port_terminal"
+        ],
+        "code": "PRT",
+        "level_2": "municipality",
+        "level_3": "freguesia",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Palau",
+        "level_1": [
+            "state",
+            "port_terminal"
+        ],
+        "code": "PLW",
+        "continent_name": "Oceania"
+    },
+    {
+        "country": "Paraguay",
+        "level_1": [
+            "capital",
+            "department",
+            "port_terminal"
+        ],
+        "code": "PRY",
+        "level_2": "district",
+        "continent_name": "South America"
+    },
+    {
+        "country": "Qatar",
+        "level_1": [
+            "municipality",
+            "port_terminal"
+        ],
+        "code": "QAT",
+        "level_2": "zone",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Romania",
+        "level_1": [
+            "department",
+            "municipality",
+            "port_terminal"
+        ],
+        "code": "ROU",
+        "level_2": "communes and village",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Serbia",
+        "level_1": [
+            "autonomous province",
+            "city",
+            "district",
+            "port_terminal"
+        ],
+        "code": "SRB",
+        "level_2": "district",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Russian Federation",
+        "level_1": [
+            "republic",
+            "administrative territory",
+            "administrative region",
+            "autonomous city",
+            "autonomous region",
+            "autonomous district",
+            "port_terminal"
+        ],
+        "code": "RUS",
+        "level_2": "oblast",
+        "level_3": "third-level administrative division",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Rwanda",
+        "level_1": [
+            "town council",
+            "province",
+            "port_terminal"
+        ],
+        "code": "RWA",
+        "level_2": "district",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Saudi Arabia",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "SAU",
+        "level_2": "governorate",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Solomon Islands",
+        "level_1": [
+            "capital territory",
+            "province",
+            "port_terminal"
+        ],
+        "code": "SLB",
+        "continent_name": "Oceania"
+    },
+    {
+        "country": "Seychelles",
+        "level_1": [
+            "district",
+            "port_terminal"
+        ],
+        "code": "SYC",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Sudan",
+        "level_1": [
+            "state",
+            "port_terminal"
+        ],
+        "code": "SDN",
+        "level_2": "district",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Sweden",
+        "level_1": [
+            "county",
+            "port_terminal"
+        ],
+        "code": "SWE",
+        "level_2": "municipality",
+        "level_3": "borough",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Singapore",
+        "level_1": [
+            "district",
+            "port_terminal"
+        ],
+        "code": "SGP",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Saint Helena, Ascension and Tristan da Cunha",
+        "level_1": [
+            "geographical entity",
+            "port_terminal"
+        ],
+        "code": "SHN",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Slovenia",
+        "level_1": [
+            "municipalities and",
+            "urban municipality",
+            "port_terminal"
+        ],
+        "code": "SVN",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Slovakia",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "SVK",
+        "level_2": "district",
+        "level_3": "municipality",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Sierra Leone",
+        "level_1": [
+            "area",
+            "province",
+            "port_terminal"
+        ],
+        "code": "SLE",
+        "level_2": "district",
+        "level_3": "chiefdom",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "San Marino",
+        "level_1": [
+            "municipality",
+            "port_terminal"
+        ],
+        "code": "SMR",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Senegal",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "SEN",
+        "level_2": "department",
+        "level_3": "arrondissement",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Somalia",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "SOM",
+        "level_2": "district",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Suriname",
+        "level_1": [
+            "district",
+            "port_terminal"
+        ],
+        "code": "SUR",
+        "continent_name": "South America"
+    },
+    {
+        "country": "South Sudan",
+        "level_1": [
+            "state",
+            "port_terminal"
+        ],
+        "code": "SSD",
+        "level_2": "state",
+        "level_3": "county",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Sao Tome and Principe",
+        "level_1": [
+            "autonomous region",
+            "district",
+            "port_terminal"
+        ],
+        "code": "STP",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "El Salvador",
+        "level_1": [
+            "department",
+            "port_terminal"
+        ],
+        "code": "SLV",
+        "level_2": "municipality",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Syria",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "SYR",
+        "level_2": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Eswatini",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "SWZ",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Chad",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "TCD",
+        "level_2": "department",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Togo",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "TGO",
+        "level_2": "prefecture",
+        "level_3": "canton",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Thailand",
+        "level_1": [
+            "metropolitan administration",
+            "special administrative city",
+            "province",
+            "port_terminal"
+        ],
+        "code": "THA",
+        "level_2": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Tajikistan",
+        "level_1": [
+            "autonomous region",
+            "region",
+            "capital territory",
+            "district under republic administration",
+            "port_terminal"
+        ],
+        "code": "TJK",
+        "level_2": "district",
+        "level_3": "jamoat",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Timor-Leste",
+        "level_1": [
+            "municipality",
+            "special administrative region",
+            "port_terminal"
+        ],
+        "code": "TLS",
+        "level_2": "administrative post",
+        "level_3": "suco",
+        "continent_name": "Continent not found for Timor-Leste"
+    },
+    {
+        "country": "Turkmenistan",
+        "level_1": [
+            "region",
+            "city",
+            "port_terminal"
+        ],
+        "code": "TKM",
+        "level_2": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Tunisia",
+        "level_1": [
+            "governorate",
+            "port_terminal"
+        ],
+        "code": "TUN",
+        "level_2": "delegation",
+        "level_3": "commune",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Tonga",
+        "level_1": [
+            "division",
+            "port_terminal"
+        ],
+        "code": "TON",
+        "continent_name": "Oceania"
+    },
+    {
+        "country": "Türkiye",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "TUR",
+        "level_2": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Trinidad and Tobago",
+        "level_1": [
+            "region",
+            "borough",
+            "city",
+            "ward",
+            "port_terminal"
+        ],
+        "code": "TTO",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Tuvalu",
+        "level_1": [
+            "town council",
+            "island council",
+            "port_terminal"
+        ],
+        "code": "TUV",
+        "continent_name": "Oceania"
+    },
+    {
+        "country": "Taiwan",
+        "level_1": [
+            "county",
+            "city",
+            "special municipality",
+            "port_terminal"
+        ],
+        "code": "TWN",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Tanzania",
+        "level_1": [
+            "region",
+            "port_terminal"
+        ],
+        "code": "TZA",
+        "level_2": "district",
+        "level_3": "ward",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Ukraine",
+        "level_1": [
+            "region",
+            "republic",
+            "city",
+            "port_terminal"
+        ],
+        "code": "UKR",
+        "level_2": "raion",
+        "continent_name": "Europe"
+    },
+    {
+        "country": "Uganda",
+        "level_1": [
+            "geographical region",
+            "district",
+            "city",
+            "port_terminal"
+        ],
+        "code": "UGA",
+        "level_2": "county",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "United States Minor Outlying Islands",
+        "level_1": [
+            "port_terminal"
+        ],
+        "code": "UMI",
+        "continent_name": "Continent not found for United States Minor Outlying Islands"
+    },
+    {
+        "country": "United States",
+        "level_1": [
+            "state",
+            "district",
+            "outlying area",
+            "port_terminal"
+        ],
+        "code": "USA",
+        "level_2": "county",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Uruguay",
+        "level_1": [
+            "department",
+            "port_terminal"
+        ],
+        "code": "URY",
+        "level_2": "municipality",
+        "continent_name": "South America"
+    },
+    {
+        "country": "Uzbekistan",
+        "level_1": [
+            "city",
+            "region",
+            "republic",
+            "port_terminal"
+        ],
+        "code": "UZB",
+        "level_2": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Saint Vincent and the Grenadines",
+        "level_1": [
+            "parish",
+            "port_terminal"
+        ],
+        "code": "VCT",
+        "continent_name": "North America"
+    },
+    {
+        "country": "Venezuela",
+        "level_1": [
+            "federal dependency",
+            "federal district",
+            "state",
+            "port_terminal"
+        ],
+        "code": "VEN",
+        "level_2": "municipality",
+        "level_3": "parish",
+        "continent_name": "South America"
+    },
+    {
+        "country": "Vietnam",
+        "level_1": [
+            "province",
+            "municipality",
+            "port_terminal"
+        ],
+        "code": "VNM",
+        "level_2": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "Vanuatu",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "VUT",
+        "continent_name": "Oceania"
+    },
+    {
+        "country": "Wallis and Futuna",
+        "level_1": [
+            "administrative precinct",
+            "port_terminal"
+        ],
+        "code": "WLF",
+        "continent_name": "Oceania"
+    },
+    {
+        "country": "Samoa",
+        "level_1": [
+            "district",
+            "port_terminal"
+        ],
+        "code": "WSM",
+        "continent_name": "Oceania"
+    },
+    {
+        "country": "Yemen",
+        "level_1": [
+            "municipality",
+            "governorate",
+            "port_terminal"
+        ],
+        "code": "YEM",
+        "level_2": "district",
+        "continent_name": "Asia"
+    },
+    {
+        "country": "South Africa",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "ZAF",
+        "level_2": "district",
+        "level_3": "municipality",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Zambia",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "ZMB",
+        "level_2": "district",
+        "continent_name": "Africa"
+    },
+    {
+        "country": "Zimbabwe",
+        "level_1": [
+            "province",
+            "port_terminal"
+        ],
+        "code": "ZWE",
+        "level_2": "district",
+        "level_3": "ward",
+        "continent_name": "Africa"
+    }
+]

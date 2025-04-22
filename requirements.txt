@@ -14,3 +14,6 @@ sentence_transformers
 matplotlib
 seaborn
 bs4
+inflect
+pycountry
+pycountry_convert

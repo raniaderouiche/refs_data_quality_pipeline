@@ -19,6 +19,8 @@ from scripts.distilBERT_model import bert
 from scripts.duplicates_detection_by_name import name_duplicates_detection
 from scripts.static_duplicate_detection import run_static_detection
 from scripts.detection_comparison import comparison
+from scripts.locations_preprocessing import preprocess_continents, assign_country_to_correct_continent, correcting_hierarchies, add_parent_column, assign_level_numbers, merging, adding_official_level_names
+
 @resource
 def spark_session():
     spark = SparkSession.builder.appName("deequ").config("spark.jars.packages", "com.amazon.deequ:deequ:2.0.9-spark-3.5") \
@@ -47,32 +49,56 @@ def deequ_data_checks(context,import_data_asset):
     spark_session = context.resources.spark_session
     data_checks(spark_session, df)
 
-@asset(description="Redefines the level names",
-       required_resource_keys={"spark_session"})
-def preprocess_level_names_asset(context,import_data_asset):
-    df = import_data_asset
-    spark_session = context.resources.spark_session
-    return preprocess_level_names(spark_session,df)
+@asset(description="Preprocess Continents in the data.",)
+def preprocess_continents_asset():
+    return preprocess_continents()
 
-@asset(description="Searching for duplicates in the data using fuzzy wuzzy library.")
-def static_detection_asset(preprocess_level_names_asset):
-    return run_static_detection(preprocess_level_names_asset)
+@asset(description="Iterates through country rows and assigns them to the correct continent.",)
+def assign_country_to_correct_continent_asset(preprocess_continents_asset):
+    continents, df = preprocess_continents_asset
+    return assign_country_to_correct_continent(continents, df)
 
-@asset(description="Searching for duplicates in the name column.")
-def name_duplicates_detection_asset(preprocess_level_names_asset):
-    return name_duplicates_detection(preprocess_level_names_asset)
+@asset(description="Correcting the countries' hierarchies.",)
+def correcting_hierarchies_asset(assign_country_to_correct_continent_asset):
+    df_countries, df, continents = assign_country_to_correct_continent_asset
+    return correcting_hierarchies(continents, df_countries, df)
+
+@asset(description="Adding parent column where each subregion is assigned to a country.",)
+def add_parent_column_asset(correcting_hierarchies_asset):
+    countries_with_corrected_hierarchies,continents, df = correcting_hierarchies_asset
+    return add_parent_column(countries_with_corrected_hierarchies,continents, df)
+
+@asset(description="Adding level number column and assigning each row to a level.",)
+def assign_level_numbers_asset(add_parent_column_asset):
+    df, countries_with_corrected_hierarchies, continents = add_parent_column_asset
+    return assign_level_numbers(df, countries_with_corrected_hierarchies, continents)
+
+@asset(description="Merging processed data.",)
+def merging_processed_data_asset(assign_level_numbers_asset):
+    df, countries_with_corrected_hierarchies, continents = assign_level_numbers_asset
+    return merging(df, countries_with_corrected_hierarchies, continents)
+
+@asset(description="Adding official admin level names.",)
+def adding_official_level_names_asset(merging_processed_data_asset):
+    locations_processed, missing_in_locations = merging_processed_data_asset
+    return adding_official_level_names(locations_processed), missing_in_locations
+
+# @asset(description="Searching for duplicates in the data using fuzzy wuzzy library.")
+# def static_detection_asset(preprocess_level_names_asset):
+#     return run_static_detection(preprocess_level_names_asset)
+
+# @asset(description="Searching for duplicates in the name column.")
+# def name_duplicates_detection_asset(preprocess_level_names_asset):
+#     return name_duplicates_detection(preprocess_level_names_asset)
 
 @asset(description="Applying the distilBERT model the data.")
-def bert_model(name_duplicates_detection_asset):
-    return bert(name_duplicates_detection_asset)
+def bert_model(adding_official_level_names_asset):
+    df, missing_in_locations = adding_official_level_names_asset
+    return bert(df)
 
-@asset(description="Comparing the two methods")
-def detection_comparison_asset(bert_model, static_detection_asset):
-    return comparison(bert_model,static_detection_asset)
-
-@asset(description="Detecting anomalies using distilBERT.")
-def detect_anomalies(preprocess_level_names_asset):
-    detect_anomalies(preprocess_level_names_asset)
+# @asset(description="Comparing the two methods")
+# def detection_comparison_asset(bert_model, static_detection_asset):
+#     return comparison(bert_model,static_detection_asset)
 
 # -- dbt assets --
 @dbt_assets(manifest=ref_dq.manifest_path)

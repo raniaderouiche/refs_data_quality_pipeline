@@ -1,0 +1,245 @@
+NAME,CODE,HIERARCHY,IS_GROUP,CHILDREN,LEVEL_NAME,CONTINENT
+South Sudan,S_SDN,ALL#WORLD#AFRMI#S_SDN,False,,COUNTRY,Africa
+CURACAO,CUW,ALL#WORLD#EUR#CUW,False,,COUNTRY,South America
+Oman,OMAN,ALL#WORLD#MIDDL#OMAN,False,,COUNTRY,Asia
+Svalbard and Jan Mayen,SAJM,SAJM,False,,COUNTRY,Europe
+Northern Ireland,N-IRL,ALL#WORLD#EUR#GBR#N-IRL,False,,COUNTRY,Europe
+Sint Maarten,SXM,ALL#WORLD#EUR#SXM,False,,COUNTRY,North America
+Saint Martin,STM,ALL#WORLD#CARIB#STM,False,,COUNTRY,North America
+Lao People's Democratic Republic (the),LAP,LAP,False,,COUNTRY,Africa
+North Macedonia,NORTH_MACED,ALL#WORLD#EASTE#NORTH_MACED,False,,COUNTRY,Europe
+San Marino ,SAN_MARINO,ALL#WORLD#EUR#SAN_MARINO,False,,COUNTRY,Europe
+Montenegro,MNE,ALL#WORLD#EASTE#SERBI#MNE,False,,COUNTRY,Europe
+"Bonaire, Sint Eustatius and Saba",BES,ALL#WORLD#CARIB#BES,False,,COUNTRY,North America
+Guernsey,GUERN,ALL#WORLD#EUR#GUERN,False,,COUNTRY,Europe
+Benin,BEN,ALL#WORLD#WESTA#BEN,False,,COUNTRY,Africa
+Burkina Faso,BFA,ALL#WORLD#WESTA#BFA,False,,COUNTRY,Africa
+Bangladesh,BGD,ALL#WORLD#ASIA#BGD,False,,COUNTRY,Asia
+Bulgaria,BGR,ALL#WORLD#EUR#BGR,False,,COUNTRY,Europe
+Bahrain,BHR,ALL#WORLD#MIDDL#BHR,False,,COUNTRY,Asia
+Bahamas,BHS,ALL#WORLD#CARIB#BHS,False,,COUNTRY,North America
+Bosnia And Herzegovina,BIH,ALL#WORLD#EASTE#BIH,False,,COUNTRY,Europe
+Belarus,BLR,ALL#WORLD#CIS#BLR,False,,COUNTRY,Europe
+Belize,BLZ,ALL#WORLD#CTLAM#BLZ,False,,COUNTRY,North America
+Bermuda,BMU,ALL#WORLD#CARIB#BMU,False,,COUNTRY,North America
+Bolivia,BOL,ALL#WORLD#OSAM#BOL,False,,COUNTRY,South America
+Brazil,BRA,ALL#WORLD#Americas#SOAME#BRA,False,,COUNTRY,South America
+Barbados,BRB,ALL#WORLD#CARIB#BRB,False,,COUNTRY,North America
+Bhutan,BTN,ALL#WORLD#ASIA#BTN,False,,COUNTRY,Asia
+Botswana,BWA,ALL#WORLD#AFRMI#BWA,False,,COUNTRY,Africa
+Central African Republic,CAF,ALL#WORLD#WESTA#CAF,False,,COUNTRY,Africa
+Canada,CAN,ALL#WORLD#NOAME#CAN,False,,COUNTRY,North America
+Switzerland,CHE,ALL#WORLD#WESTE#CHE,False,,COUNTRY,Europe
+Chile,CHL,ALL#WORLD#OSAM#CHL,False,,COUNTRY,South America
+China,CHN,ALL#WORLD#ASIA#CHN,False,,COUNTRY,Asia
+Ivory Coast,CIV,ALL#WORLD#WESTA#CIV,False,,COUNTRY,Africa
+Cameroon,CMR,ALL#WORLD#WESTA#CMR,False,,COUNTRY,Africa
+"Congo, The Democratic Republic, Formerly Zaire",COD,ALL#WORLD#CWA#COD,False,,COUNTRY,Africa
+Congo,COG,ALL#WORLD#CWA#COG,False,,COUNTRY,Africa
+Colombia,COL,ALL#WORLD#OSAM#COL,False,,COUNTRY,South America
+Cape Verde,CPV,ALL#WORLD#AFRMI#CPV,False,,COUNTRY,Africa
+Costa Rica,CRI,ALL#WORLD#CTLAM#CRI,False,,COUNTRY,North America
+Cuba,CUB,ALL#WORLD#CTLAM#CUB,False,,COUNTRY,North America
+Cayman Islands,CYM,ALL#WORLD#CARIB#CYM,False,,COUNTRY,North America
+Cyprus,CYP,ALL#WORLD#EUR#CYP,False,,COUNTRY,Asia
+Czech Republic,CZE,ALL#WORLD#EUR#CZE_SVK#CZE,False,,COUNTRY,Europe
+Germany,DEU,ALL#WORLD#EUR#DEU,False,,COUNTRY,Europe
+Djibouti,DJI,ALL#WORLD#AFRMI#DJI,False,,COUNTRY,Africa
+Denmark,DNK,ALL#WORLD#EUR#DNK,False,,COUNTRY,Europe
+Dominican Republic,DOM,ALL#WORLD#CTLAM#DOM,False,,COUNTRY,North America
+Ecuador,ECU,ALL#WORLD#OSAM#ECU,False,,COUNTRY,South America
+Egypt,EGY,ALL#WORLD#AFRMI#EGY,False,,COUNTRY,Africa
+Eritrea,ERI,ALL#WORLD#AFRMI#ERI,False,,COUNTRY,Africa
+Spain,ESP,ALL#WORLD#EUR#ESP,False,,COUNTRY,Europe
+Estonia,EST,ALL#WORLD#EUR#EST,False,,COUNTRY,Europe
+Ethiopia,ETH,ALL#WORLD#AFRMI#ETH,False,,COUNTRY,Africa
+Finland,FIN,ALL#WORLD#EUR#FIN,False,,COUNTRY,Europe
+Fiji,FJI,ALL#WORLD#OCEAN#FJI,False,,COUNTRY,Oceania
+France,FRA,ALL#WORLD#EUR#FRA,False,,COUNTRY,Europe
+Gabon,GAB,ALL#WORLD#CWA#GAB,False,,COUNTRY,Africa
+United Kingdom,GBR,ALL#WORLD#EUR#GBR,False,,COUNTRY,Europe
+Georgia,GEO,ALL#WORLD#CIS#GEO,False,,COUNTRY,Asia
+Ghana,GHA,ALL#WORLD#AFRMI#GHA,False,,COUNTRY,Africa
+Gibraltar,GIB,ALL#WORLD#WESTE#GIB,False,,COUNTRY,Europe
+Guinea,GIN,ALL#WORLD#AFRMI#GIN,False,,COUNTRY,Africa
+Gambia,GMB,ALL#WORLD#AFRMI#GMB,False,,COUNTRY,Africa
+Guinea-Bissau,GNB,ALL#WORLD#AFRMI#GNB,False,,COUNTRY,Africa
+Equatorial Guinea,GNQ,ALL#WORLD#CWA#GNQ,False,,COUNTRY,Africa
+Greece,GRC,ALL#WORLD#EUR#GRC,False,,COUNTRY,Europe
+Guatemala,GTM,ALL#WORLD#CTLAM#GTM,False,,COUNTRY,North America
+Guyana,GUY,ALL#WORLD#OSAM#GUY,False,,COUNTRY,South America
+Hong Kong,HKG,ALL#WORLD#ASIA#HKG,False,,COUNTRY,Asia
+Honduras,HND,ALL#WORLD#CTLAM#HND,False,,COUNTRY,North America
+Croatia,HRV,ALL#WORLD#EUR#HRV,False,,COUNTRY,Europe
+Haiti,HTI,ALL#WORLD#CTLAM#HTI,False,,COUNTRY,North America
+Hungary,HUN,ALL#WORLD#EUR#HUN,False,,COUNTRY,Europe
+Indonesia,IDN,ALL#WORLD#ASIA#IDN,False,,COUNTRY,Asia
+India,IND,ALL#WORLD#ASIA#IND,False,,COUNTRY,Asia
+Ireland,IRL,ALL#WORLD#EUR#IRL,False,,COUNTRY,Europe
+Iran,IRN,ALL#WORLD#AFRMI#IRN,False,,COUNTRY,Asia
+Iraq,IRQ,ALL#WORLD#AFRMI#IRQ,False,,COUNTRY,Asia
+Iceland,ISL,ALL#WORLD#WESTE#ISL,False,,COUNTRY,Europe
+Israel,ISR,ALL#WORLD#AFRMI#ISR,False,,COUNTRY,Asia
+Italy,ITA,ALL#WORLD#EUR#ITA,False,,COUNTRY,Europe
+Jamaica,JAM,ALL#WORLD#CTLAM#JAM,False,,COUNTRY,North America
+Jordan,JOR,ALL#WORLD#AFRMI#JOR,False,,COUNTRY,Asia
+Japan,JPN,ALL#WORLD#ASIA#JPN,False,,COUNTRY,Asia
+Kazakhstan,KAZ,ALL#WORLD#CIS#KAZ,False,,COUNTRY,Asia
+Kenya,KEN,ALL#WORLD#AFRMI#KEN,False,,COUNTRY,Africa
+Kyrgyzstan,KGZ,ALL#WORLD#CIS#KGZ,False,,COUNTRY,Asia
+Cambodia,KHM,ALL#WORLD#ASIA#KHM,False,,COUNTRY,Asia
+South Korea,KOR,ALL#WORLD#ASIA#KOR,False,,COUNTRY,Asia
+Kuwait,KWT,ALL#WORLD#MIDDL#KWT,False,,COUNTRY,Asia
+Laos,LAO,ALL#WORLD#ASIA#LAO,False,,COUNTRY,Asia
+Lebanon,LBN,ALL#WORLD#AFRMI#LBN,False,,COUNTRY,Asia
+Liberia,LBR,ALL#WORLD#AFRMI#LBR,False,,COUNTRY,Africa
+Libya,LBY,ALL#WORLD#AFRMI#LBY,False,,COUNTRY,Africa
+Liechtenstein,LIE,ALL#WORLD#WESTE#LIE,False,,COUNTRY,Europe
+Sri Lanka,LKA,ALL#WORLD#ASIA#LKA,False,,COUNTRY,Asia
+Lithuania,LTU,ALL#WORLD#EUR#LTU,False,,COUNTRY,Europe
+Luxembourg,LUX,ALL#WORLD#EUR#LUX,False,,COUNTRY,Europe
+Latvia,LVA,ALL#WORLD#EUR#LVA,False,,COUNTRY,Europe
+Macau,MAC,ALL#WORLD#ASIA#MAC,False,,COUNTRY,Asia
+Morocco,MAR,ALL#WORLD#AFRMI#MAR,False,,COUNTRY,Africa
+Monaco,MCO,ALL#WORLD#WESTE#MCO,False,,COUNTRY,Europe
+Moldova,MDA,ALL#WORLD#CIS#MDA,False,,COUNTRY,Europe
+Madagascar,MDG,ALL#WORLD#AFRMI#MDG,False,,COUNTRY,Africa
+Mexico,MEX,ALL#WORLD#NOAME#MEX,False,,COUNTRY,North America
+Macedonia,MKD,ALL#WORLD#EASTE#MKD,False,,COUNTRY,Europe
+Mali,MLI,ALL#WORLD#WESTA#MLI,False,,COUNTRY,Africa
+Malta,MLT,ALL#WORLD#EUR#MLT,False,,COUNTRY,Europe
+Myanmar,MMR,ALL#WORLD#ASIA#MMR,False,,COUNTRY,Asia
+Mongolia,MNG,ALL#WORLD#ASIA#MNG,False,,COUNTRY,Asia
+Mozambique,MOZ,ALL#WORLD#AFRMI#MOZ,False,,COUNTRY,Africa
+Mauritania,MRT,ALL#WORLD#AFRMI#MRT,False,,COUNTRY,Africa
+Mauritius,MUS,ALL#WORLD#EASTA#MUS,False,,COUNTRY,Africa
+Malawi,MWI,ALL#WORLD#AFRMI#MWI,False,,COUNTRY,Africa
+Malaysia,MYS,ALL#WORLD#ASIA#MYS,False,,COUNTRY,Asia
+Namibia,NAM,ALL#WORLD#AFRMI#NAM,False,,COUNTRY,Africa
+Niger,NER,ALL#WORLD#WESTA#NER,False,,COUNTRY,Africa
+Nigeria,NGA,ALL#WORLD#WESTA#NGA,False,,COUNTRY,Africa
+Nicaragua,NIC,ALL#WORLD#CTLAM#NIC,False,,COUNTRY,North America
+Netherlands,NLD,ALL#WORLD#EUR#NLD,False,,COUNTRY,Europe
+Norway,NOR,ALL#WORLD#WESTE#NOR,False,,COUNTRY,Europe
+Nepal,NPL,ALL#WORLD#ASIA#NPL,False,,COUNTRY,Asia
+New Zealand,NZL,ALL#WORLD#OCEAN#NZL,False,,COUNTRY,Oceania
+Oman,OMN,ALL#WORLD#MIDDL#OMN,False,,COUNTRY,Asia
+Pakistan,PAK,ALL#WORLD#ASIA#PAK,False,,COUNTRY,Asia
+Panama,PAN,ALL#WORLD#CTLAM#PAN,False,,COUNTRY,North America
+Peru,PER,ALL#WORLD#OSAM#PER,False,,COUNTRY,South America
+Philippines,PHL,ALL#WORLD#ASIA#PHL,False,,COUNTRY,Asia
+Poland,POL,ALL#WORLD#EUR#POL,False,,COUNTRY,Europe
+Puerto Rico,PRI,ALL#WORLD#CARIB#PRI,False,,COUNTRY,North America
+North Korea,PRK,ALL#WORLD#ASIA#PRK,False,,COUNTRY,Asia
+Portugal,PRT,ALL#WORLD#EUR#PRT,False,,COUNTRY,Europe
+Paraguay,PRY,ALL#WORLD#OSAM#PRY,False,,COUNTRY,South America
+French Polynesia,PYF,ALL#WORLD#OCEAN#PYF,False,,COUNTRY,Oceania
+Qatar,QAT,ALL#WORLD#MIDDL#QAT,False,,COUNTRY,Asia
+Romania,ROU,ALL#WORLD#EUR#ROU,False,,COUNTRY,Europe
+Russian Federation,RUS,ALL#WORLD#CIS#RUS,False,,COUNTRY,Europe
+Rwanda,RWA,ALL#WORLD#AFRMI#RWA,False,,COUNTRY,Africa
+Saudi Arabia,SAU,ALL#WORLD#AFRMI#SAU,False,,COUNTRY,Asia
+Sudan,SDN,ALL#WORLD#AFRMI#SDN,False,,COUNTRY,Africa
+Senegal,SEN,ALL#WORLD#WESTA#SEN,False,,COUNTRY,Africa
+Singapore,SGP,ALL#WORLD#ASIA#SGP,False,,COUNTRY,Asia
+Sierra Leone,SLE,ALL#WORLD#AFRMI#SLE,False,,COUNTRY,Africa
+El Salvador,SLV,ALL#WORLD#CTLAM#SLV,False,,COUNTRY,North America
+Somalia,SOM,ALL#WORLD#AFRMI#SOM,False,,COUNTRY,Africa
+Saint Pierre And Miquelon,SPM,ALL#WORLD#CARIB#SPM,False,,COUNTRY,North America
+Serbia,SRB,ALL#WORLD#EASTE#SERBI#SRB,False,,COUNTRY,Europe
+Sao Tome And Principe,STP,ALL#WORLD#AFRMI#STP,False,,COUNTRY,Africa
+Suriname,SUR,ALL#WORLD#OSAM#SUR,False,,COUNTRY,South America
+Slovakia,SVK,ALL#WORLD#EUR#CZE_SVK#SVK,False,,COUNTRY,Europe
+Slovenia,SVN,ALL#WORLD#EUR#SVN,False,,COUNTRY,Europe
+Sweden,SWE,ALL#WORLD#EUR#SWE,False,,COUNTRY,Europe
+Swaziland,SWZ,ALL#WORLD#AFRMI#SWZ,False,,COUNTRY,Africa
+Syrian Arab Republic,SYR,ALL#WORLD#AFRMI#SYR,False,,COUNTRY,Asia
+Chad,TCD,ALL#WORLD#WESTA#TCD,False,,COUNTRY,Africa
+Togo,TGO,ALL#WORLD#WESTA#TGO,False,,COUNTRY,Africa
+Thailand,THA,ALL#WORLD#ASIA#THA,False,,COUNTRY,Asia
+Aruba,ABW,ALL#WORLD#ABW,False,,COUNTRY,North America
+Tajikistan,TJK,ALL#WORLD#CIS#TJK,False,,COUNTRY,Asia
+Turkmenistan,TKM,ALL#WORLD#CIS#TKM,False,,COUNTRY,Asia
+Tonga,TON,ALL#WORLD#OCEAN#TON,False,,COUNTRY,Oceania
+Trinidad And Tobago,TTO,ALL#WORLD#CARIB#TTO,False,,COUNTRY,North America
+Tunisia,TUN,ALL#WORLD#AFRMI#TUN,False,,COUNTRY,Africa
+Turkey,TUR,ALL#WORLD#WESTE#TUR,False,,COUNTRY,Asia
+Taiwan,TWN,ALL#WORLD#ASIA#TWN,False,,COUNTRY,Asia
+Tanzania,TZA,ALL#WORLD#EASTA#TZA,False,,COUNTRY,Africa
+Uganda,UGA,ALL#WORLD#AFRMI#UGA,False,,COUNTRY,Africa
+Ukraine,UKR,ALL#WORLD#CIS#UKR,False,,COUNTRY,Europe
+Anguilla,AIA,ALL#WORLD#AIA,False,,COUNTRY,North America
+Uruguay,URY,ALL#WORLD#OSAM#URY,False,,COUNTRY,South America
+United States,USA,ALL#WORLD#NOAME#USA,False,,COUNTRY,North America
+Uzbekistan,UZB,ALL#WORLD#CIS#UZB,False,,COUNTRY,Asia
+Saint Vincent And The Grenadines,VCT,ALL#WORLD#CARIB#VCT,False,,COUNTRY,North America
+Venezuela,VEN,ALL#WORLD#OSAM#VEN,False,,COUNTRY,South America
+Virgin Islands (British),VGB,ALL#WORLD#CARIB#VGB,False,,COUNTRY,Oceania
+Virgin Islands (U.S.),VIR,ALL#WORLD#CARIB#VIR,False,,COUNTRY,Continent not found for United States Minor Outlying Islands
+Vietnam,VNM,ALL#WORLD#ASIA#VNM,False,,COUNTRY,Asia
+Samoa,WSM,ALL#WORLD#OCEAN#WSM,False,,COUNTRY,Oceania
+Aland Islands,ALA,ALL#WORLD#ALA,False,,COUNTRY,Continent not found for United States Minor Outlying Islands
+Yemen,YEM,ALL#WORLD#AFRMI#YEM,False,,COUNTRY,Asia
+South Africa,ZAF,ALL#WORLD#EASTA#ZAF,False,,COUNTRY,Africa
+Zambia,ZMB,ALL#WORLD#CWA#ZMB,False,,COUNTRY,Africa
+Zimbabwe,ZWE,ALL#WORLD#EASTA#ZWE,False,,COUNTRY,Africa
+Algeria,DZA,ALL#WORLD#DZA,False,,COUNTRY,Africa
+Netherlands Antilles,ANT,ALL#WORLD#ANT,False,,COUNTRY,Europe
+American Samoa,ASM,ALL#WORLD#ASM,False,,COUNTRY,Oceania
+Brunei Darussalam,BRN,ALL#WORLD#BRN,False,,COUNTRY,Asia
+Bouvet Island,BVT,ALL#WORLD#BVT,False,,COUNTRY,Antarctica
+Cocos (Keeling) Islands,CCK,ALL#WORLD#CCK,False,,COUNTRY,Asia
+Cook Islands,COK,ALL#WORLD#COK,False,,COUNTRY,Oceania
+Comoros,COM,ALL#WORLD#COM,False,,COUNTRY,Africa
+Christmas Island,CXR,ALL#WORLD#CXR,False,,COUNTRY,Asia
+Dominica,DMA,ALL#WORLD#DMA,False,,COUNTRY,North America
+Falkland Islands (Malvinas),FLK,ALL#WORLD#FLK,False,,COUNTRY,South America
+Faroe Islands,FRO,ALL#WORLD#FRO,False,,COUNTRY,Europe
+"Micronesia, Federated States Of",FSM,ALL#WORLD#FSM,False,,COUNTRY,Oceania
+Grenada,GRD,ALL#WORLD#GRD,False,,COUNTRY,North America
+Greenland,GRL,ALL#WORLD#GRL,False,,COUNTRY,North America
+Guam,GUM,ALL#WORLD#GUM,False,,COUNTRY,Oceania
+Heard Island & Mcdonald Islands,HMD,ALL#WORLD#HMD,False,,COUNTRY,Oceania
+British Indian Ocean Territory,IOT,ALL#WORLD#IOT,False,,COUNTRY,Asia
+Jersey,JEY,ALL#WORLD#JEY,False,,COUNTRY,Europe
+Kiribati,KIR,ALL#WORLD#KIR,False,,COUNTRY,Oceania
+Saint Kitts And Nevis,KNA,ALL#WORLD#KNA,False,,COUNTRY,North America
+Saint Lucia,LCA,ALL#WORLD#LCA,False,,COUNTRY,North America
+Lesotho,LSO,ALL#WORLD#LSO,False,,COUNTRY,Africa
+Maldives,MDV,ALL#WORLD#MDV,False,,COUNTRY,Asia
+Marshall Islands,MHL,ALL#WORLD#MHL,False,,COUNTRY,Oceania
+Northern Mariana Islands,MNP,ALL#WORLD#MNP,False,,COUNTRY,Oceania
+Montserrat,MSR,ALL#WORLD#MSR,False,,COUNTRY,North America
+Mayotte,MYT,ALL#WORLD#MYT,False,,COUNTRY,Africa
+New Caledonia,NCL,ALL#WORLD#NCL,False,,COUNTRY,Oceania
+Norfolk Island,NFK,ALL#WORLD#NFK,False,,COUNTRY,Oceania
+Niue,NIU,ALL#WORLD#NIU,False,,COUNTRY,Oceania
+Nauru,NRU,ALL#WORLD#NRU,False,,COUNTRY,Oceania
+Palau,PLW,ALL#WORLD#PLW,False,,COUNTRY,Oceania
+Papua New Guinea,PNG,ALL#WORLD#PNG,False,,COUNTRY,Oceania
+South Georgia And The South Sandwich Islands,SGS,ALL#WORLD#SGS,False,,COUNTRY,Asia
+Saint Helena,SHN,ALL#WORLD#SHN,False,,COUNTRY,Africa
+Svalbard And Jan Mayen Islands,SJM,ALL#WORLD#SJM,False,,COUNTRY,North America
+Solomon Islands,SLB,ALL#WORLD#SLB,False,,COUNTRY,Oceania
+San Marino,SMR,ALL#WORLD#SMR,False,,COUNTRY,Europe
+Seychelles,SYC,ALL#WORLD#SYC,False,,COUNTRY,Africa
+Turks And Caicos Islands,TCA,ALL#WORLD#TCA,False,,COUNTRY,Oceania
+Tokelau,TKL,ALL#WORLD#TKL,False,,COUNTRY,Oceania
+Timor-Leste,TLS,ALL#WORLD#TLS,False,,COUNTRY,Continent not found for Timor-Leste
+Tuvalu,TUV,ALL#WORLD#TUV,False,,COUNTRY,Oceania
+United Arab Emirates,UAE,ALL#WORLD#UAE,False,,COUNTRY,Asia
+United States Minor Outlying Islands,UMI,ALL#WORLD#UMI,False,,COUNTRY,Continent not found for United States Minor Outlying Islands
+Vanuatu,VUT,ALL#WORLD#VUT,False,,COUNTRY,Oceania
+Wallis And Futuna Islands,WLF,ALL#WORLD#WLF,False,,COUNTRY,Oceania
+Afghanistan,AFG,ALL#WORLD#AFRMI#AFG,False,,COUNTRY,Asia
+Angola,AGO,ALL#WORLD#CWA#AGO,False,,COUNTRY,Africa
+Albania,ALB,ALL#WORLD#EASTE#ALB,False,,COUNTRY,Europe
+Andorra,AND,ALL#WORLD#WESTE#AND,False,,COUNTRY,Europe
+Argentina,ARG,ALL#WORLD#Americas#SOAME#ARG,False,,COUNTRY,South America
+Armenia,ARM,ALL#WORLD#CIS#ARM,False,,COUNTRY,Asia
+Antigua And Barbuda,ATG,ALL#WORLD#CARIB#ATG,False,,COUNTRY,North America
+Australia,AUS,ALL#WORLD#OCEAN#AUS,False,,COUNTRY,Oceania
+Austria,AUT,ALL#WORLD#EUR#AUT,False,,COUNTRY,Europe
+Azerbaijan,AZE,ALL#WORLD#CIS#AZE,False,,COUNTRY,Asia
+Burundi,BDI,ALL#WORLD#AFRMI#BDI,False,,COUNTRY,Africa
+Belgium,BEL,ALL#WORLD#EUR#BEL,False,,COUNTRY,Europe

@@ -16,18 +16,8 @@ def spark_session():
 def import_data(spark):
     # spark = spark_session()
     df = spark.read.csv("C:/Users/Rania/Documents/PFE/refs_data_quality_pipeline/data/DNEXR.REFERENCE.location.csv", header=True)
+    df.show()
     return df
-
-# def check_data(spark,df):
-#     result = VerificationSuite(spark).onData(df).addCheck(
-#         Check(spark, CheckLevel.Error, "Data Quality Check")
-#         .isComplete("NAME")
-#     ).run()
-
-#     result_df = VerificationResult.checkResultsAsDataFrame(spark, result)
-#     result_df.show()
-#     if result_df.filter("check_status != 'Success'").count() > 0:
-#         raise Exception("Data quality checks failed")
 
 def data_exploration(spark,df):
     if not isinstance(df, pyspark.sql.DataFrame):
