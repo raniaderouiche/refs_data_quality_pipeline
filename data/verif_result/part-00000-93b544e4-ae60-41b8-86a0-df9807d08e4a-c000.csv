@@ -1,0 +1,13 @@
+check,check_level,check_status,constraint,constraint_status,constraint_message
+Data Quality Checks,Error,Error,"CompletenessConstraint(Completeness(NAME,None,None))",Success,""
+Data Quality Checks,Error,Error,"CompletenessConstraint(Completeness(CODE,None,None))",Success,""
+Data Quality Checks,Error,Error,"CompletenessConstraint(Completeness(HIERARCHY,None,None))",Success,""
+Data Quality Checks,Error,Error,"CompletenessConstraint(Completeness(LEVEL_NAME,None,None))",Success,""
+Data Quality Checks,Error,Error,"ComplianceConstraint(Compliance(PARENT completeness excluding ALL/WORLD,CODE IN ('ALL', 'WORLD') OR PARENT IS NOT NULL,None,List(),None))",Failure,Value: 0.9999179049339135 does not meet the constraint requirement!
+Data Quality Checks,Error,Error,"ComplianceConstraint(Compliance(LEVEL_NUMBER completeness excluding ALL/WORLD,CODE IN ('ALL', 'WORLD') OR LEVEL_NUMBER IS NOT NULL,None,List(),None))",Failure,Value: 0.9999179049339135 does not meet the constraint requirement!
+Data Quality Checks,Error,Error,"CompletenessConstraint(Completeness(OFFICIAL_LEVEL_NAME,None,None))",Success,""
+Data Quality Checks,Error,Error,"UniquenessConstraint(Uniqueness(List(CODE),None,None))",Success,""
+Data Quality Checks,Error,Error,"DistinctnessConstraint(Distinctness(Stream(NAME, ?),None))",Failure,Value: 0.8954929808718496 does not meet the constraint requirement!
+Data Quality Checks,Error,Error,"ApproxCountDistinctConstraint(ApproxCountDistinct(NAME,None))",Success,""
+Data Quality Checks,Error,Error,"PatternMatchConstraint(HIERARCHY, ALL#.*#.*)",Failure,Value: 0.9998358098678269 does not meet the constraint requirement!
+Data Quality Checks,Error,Error,"ComplianceConstraint(Compliance(Country-level hierarchy should have 3 #s,(LEVEL_NAME != 'COUNTRY') OR (size(split(HIERARCHY, '#')) = 4),None,List(),None))",Success,""

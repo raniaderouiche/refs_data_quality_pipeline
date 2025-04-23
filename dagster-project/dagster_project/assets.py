@@ -13,13 +13,16 @@ from pyspark.sql import SparkSession
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
-from deequ.preprocessing import import_data, preprocess_level_names,data_checks,shorten_hierarchy,data_exploration
+# from deequ.preprocessing import import_data, preprocess_level_names,data_checks,shorten_hierarchy,data_exploration
 from scripts.anomalies_detection import detect_anomalies
 from scripts.distilBERT_model import bert
 from scripts.duplicates_detection_by_name import name_duplicates_detection
 from scripts.static_duplicate_detection import run_static_detection
 from scripts.detection_comparison import comparison
 from scripts.locations_preprocessing import preprocess_continents, assign_country_to_correct_continent, correcting_hierarchies, add_parent_column, assign_level_numbers, merging, adding_official_level_names
+
+
+from deequ.quality_validation import import_data, data_validation
 
 @resource
 def spark_session():
@@ -37,17 +40,24 @@ def import_data_asset(context):
 
 @asset(description="Explores the data using Deequ's analysis tools.",
        required_resource_keys={"spark_session"})
-def deequ_data_exploration(context,import_data_asset):
+def deequ_data_validation(context,import_data_asset):
     df = import_data_asset
     spark_session = context.resources.spark_session
-    data_exploration(spark_session, df)
+    data_validation(spark_session, df)
 
-@asset(description="Checks the data quality using Deequ's checks on predefined tests.",
-       required_resource_keys={"spark_session"})
-def deequ_data_checks(context,import_data_asset):
-    df = import_data_asset
-    spark_session = context.resources.spark_session
-    data_checks(spark_session, df)
+# @asset(description="Explores the data using Deequ's analysis tools.",
+#        required_resource_keys={"spark_session"})
+# def deequ_data_exploration(context,import_data_asset):
+#     df = import_data_asset
+#     spark_session = context.resources.spark_session
+#     data_exploration(spark_session, df)
+
+# @asset(description="Checks the data quality using Deequ's checks on predefined tests.",
+#        required_resource_keys={"spark_session"})
+# def deequ_data_checks(context,import_data_asset):
+#     df = import_data_asset
+#     spark_session = context.resources.spark_session
+#     data_checks(spark_session, df)
 
 @asset(description="Preprocess Continents in the data.",)
 def preprocess_continents_asset():

@@ -93,9 +93,10 @@ def assign_country_to_correct_continent(continents, df):
 
     df_countries = assign_continent(df_countries, levels_reference_dict)
 
-    df_countries_with_continents = df_countries[df_countries['CONTINENT'] != "NOT FOUND"]
+    # df_countries_with_continents = df_countries[df_countries['CONTINENT'] != "NOT FOUND"]
     countries_with_continents_not_found = df_countries[~df_countries['CONTINENT'].isin(continent_list)]
-
+    df_countries_with_continents = df_countries[~df_countries['CODE'].isin(countries_with_continents_not_found['CODE'])]
+    
     df_countries_with_continents.to_csv('../data/results/df_countries_with_continents.csv', index=False, encoding='utf-8')
     countries_with_continents_not_found.to_csv('../data/results/countries_with_continents_not_found.csv', index=False, encoding='utf-8')
 
