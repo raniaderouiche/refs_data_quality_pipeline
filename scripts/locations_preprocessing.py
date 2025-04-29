@@ -141,10 +141,27 @@ def add_parent_column(countries_with_corrected_hierarchies,continents, df):
         country_code = row["CODE"]
         corrected_country_h = row["HIERARCHY"]
         
-        mask = (df["PARENT"] == country_code) & (df["LEVEL_NAME"].str.upper() != "COUNTRY")
-        df.loc[mask, "HIERARCHY"] = df.loc[mask, "HIERARCHY"].apply(
-            lambda h: corrected_country_h + h[h.find(country_code) + len(country_code):]
-        )
+        # mask = (df["PARENT"] == country_code) & (df["LEVEL_NAME"].str.upper() != "COUNTRY")
+        # df.loc[mask, "HIERARCHY"] = df.loc[mask, "HIERARCHY"].apply(
+        #     lambda h: corrected_country_h + h[h.find(country_code) + len(country_code):]
+        # )
+        mask = (df["PARENT"].str.contains(country_code)) & (df["LEVEL_NAME"].str.upper() != "COUNTRY")
+
+        def update_hierarchy(h):
+            if pd.notna(h):
+                # Assuming the country code appears somewhere in the existing hierarchy
+                parts = h.split("#")
+                if country_code in parts:
+                    # Find the index of the country code and reconstruct the hierarchy
+                    country_index = parts.index(country_code)
+                    new_hierarchy_parts = corrected_country_h.split("#") + parts[country_index+1:]
+                    return "#".join(new_hierarchy_parts)
+                else:
+                    return h # Return original if country code not found (shouldn't happen with the mask)
+            else:
+                return corrected_country_h
+
+        df.loc[mask, "HIERARCHY"] = df.loc[mask, "HIERARCHY"].apply(update_hierarchy)
     
     return df, countries_with_corrected_hierarchies, continents
 

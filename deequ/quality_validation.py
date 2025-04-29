@@ -1,4 +1,5 @@
 import os
+
 os.environ["SPARK_VERSION"] = "3.5" 
 os.environ["PYSPARK_PYTHON"] = "python"
 os.environ["PYSPARK_DRIVER_PYTHON"] = "python"
@@ -10,7 +11,10 @@ from pydeequ.verification import VerificationSuite, VerificationResult
 from pydeequ.analyzers import *
 from pyspark.sql.functions import regexp_replace,when, col
 from pyspark.sql.functions import col, size, split
+from pyspark.sql import functions as F
 import re
+from pyspark.sql import functions as F
+from pyspark.sql import types as T
 
 def spark_session():
     spark = SparkSession.builder.appName("deequ").config("spark.jars.packages", "com.amazon.deequ:deequ:2.0.9-spark-3.5") \
@@ -48,25 +52,23 @@ def data_validation(spark, df):
         .isComplete("CODE") \
         .isComplete("HIERARCHY") \
         .isComplete("LEVEL_NAME") \
-        .satisfies(
-                "CODE IN ('ALL', 'WORLD') OR PARENT IS NOT NULL",
-                "PARENT completeness excluding ALL/WORLD",
-                lambda x: x >= 1.0
-            ) \
-        .satisfies(
-                "CODE IN ('ALL', 'WORLD') OR LEVEL_NUMBER IS NOT NULL",
-                "LEVEL_NUMBER completeness excluding ALL/WORLD",
-                lambda x: x >= 1.0
-            ) \
         .isComplete("OFFICIAL_LEVEL_NAME") \
+        .isComplete("PARENT") \
+        .isComplete("LEVEL_NUMBER") \
         .isUnique("CODE") \
         .hasDistinctness(["NAME"], lambda x: x >= 0.95) \
         .hasApproxCountDistinct("NAME", lambda x: x >= 12000) \
-        .hasPattern("HIERARCHY", r"ALL#.*#.*")\
+        .hasPattern("HIERARCHY", r"ALL#.*#.*") \
         .satisfies(
             "(LEVEL_NAME != 'COUNTRY') OR (size(split(HIERARCHY, '#')) = 4)",
             "Country-level hierarchy should have 3 #s",
-            lambda x: x >= 1.0  # Pass threshold: all rows matching
+            lambda x: x >= 1.0
+        )\
+        .satisfies(
+            "array_position(split(HIERARCHY, '#'), PARENT) IS NULL OR " \
+            "(size(slice(split(HIERARCHY, '#'), array_position(split(HIERARCHY, '#'), PARENT) + 1, 1000)) = LEVEL_NUMBER)",
+            "LEVEL_NUMBER matches # after PARENT AND (LEVEL_NAME != 'CONTINENT')",
+            lambda x: x >= 1.0
         )
 
 
@@ -90,51 +92,6 @@ def detect_wrong_country_hierarchy(df):
 
     return problematic_rows
 
-def get_completeness_violations_df(check_results_df, data_df):
-    failing_constraints = (
-        check_results_df
-        .filter((col("constraint_status") == "Failure"))
-        .select("constraint")
-        .rdd.flatMap(lambda x: x)
-        .collect()
-    )
-
-    filters = []
-    print("failing_constraints: ", failing_constraints)
-    for constraint in failing_constraints:
-        # Handle CompletenessConstraint
-        match = re.search(r"CompletenessConstraint\(Completeness\((\w+)", constraint)
-        if match:
-            column = match.group(1)
-            filters.append((column, None))  # None = no exclusion
-
-        # Handle PARENT compliance condition
-        elif "Compliance(PARENT completeness excluding ALL/WORLD" in constraint:
-            filters.append(("PARENT", ["ALL", "WORLD"]))
-
-        # Handle PARENT compliance condition
-        elif "Compliance(LEVEL_NUMBER completeness excluding ALL/WORLD" in constraint:
-            filters.append(("LEVEL_NUMBER", ["ALL", "WORLD"]))
-
-    failing_rows = []
-
-    for column, exclusions in filters:
-        if exclusions:
-            filtered = data_df.filter(
-                col(column).isNull() & (~col("CODE").isin(exclusions))
-            )
-        else:
-            filtered = data_df.filter(col(column).isNull())
-
-        failing_rows.append(filtered)
-
-    if not failing_rows:
-        return data_df.limit(0)
-    elif len(failing_rows) == 1:
-        return failing_rows[0]
-    else:
-        return failing_rows[0].unionByName(*failing_rows[1:])
-
 def get_failed_checks(check_results_df):
     failing_constraints = (
         check_results_df
@@ -147,21 +104,96 @@ def get_failed_checks(check_results_df):
     print("failing_constraints: ", failing_constraints)
     return failing_constraints
 
+# Placeholder for your custom duplicate detection
+def detect_duplicates(df):
+    window_spec = (
+        df.groupBy("NAME")
+          .agg(F.count("*").alias("count"))
+          .filter(F.col("count") > 1)
+    )
+    duplicates = df.join(window_spec, on="NAME", how="inner")
+    return duplicates
+
+def extract_problematic_rows(df, validation_result):
+    problems = {}
+
+    validation_result_pd = validation_result.toPandas()
+
+    # UDF to calculate number of elements after parent
+    def count_after_parent(hierarchy, parent):
+        if hierarchy is None or parent is None:
+            return None
+        parts = hierarchy.split('#')
+        try:
+            idx = parts.index(parent)
+            return len(parts[idx + 1:])
+        except ValueError:
+            return None
+
+    count_after_parent_udf = F.udf(count_after_parent, T.IntegerType())
+
+    df_with_count = df.withColumn(
+        "count_after_parent",
+        count_after_parent_udf(F.col("HIERARCHY"), F.col("PARENT"))
+    )
+
+    for _, row in validation_result_pd.iterrows():
+        constraint = row['constraint']
+        status = row['constraint_status']
+
+        if status != 'Failure':
+            continue
+
+        if constraint.startswith("CompletenessConstraint"):
+            col_name = constraint.split("Completeness(")[1].split(",")[0]
+            problems[f"Null values in {col_name}"] = df.filter(F.col(col_name).isNull())
+
+        elif constraint.startswith("DistinctnessConstraint"):
+            problems["Duplicate NAME entries"] = detect_duplicates(df)
+
+        elif constraint.startswith("PatternMatchConstraint") and "HIERARCHY" in constraint:
+            problems["Incorrect HIERARCHY pattern"] = df.filter(
+                ~F.col("HIERARCHY").rlike(r"^ALL#.*#.*")
+            )
+
+        elif constraint.startswith("ComplianceConstraint") and "Country-level hierarchy should have 3 #s" in constraint:
+            problems["Incorrect COUNTRY level hierarchy structure"] = df.filter(
+                (F.col("LEVEL_NAME") == "COUNTRY") &
+                (F.size(F.split(F.col("HIERARCHY"), "#")) != 4)
+            )
+
+        elif constraint.startswith("ComplianceConstraint") and "LEVEL_NUMBER matches # after PARENT" in constraint:
+            problems["LEVEL_NUMBER mismatch with HIERARCHY after PARENT"] = df_with_count.filter(
+                (F.col("count_after_parent").isNotNull()) &
+                (F.col("LEVEL_NUMBER") != F.col("count_after_parent")) & (F.col("LEVEL_NAME") != "CONTINENT")
+            )
+
+    return problems
+
 if __name__ == "__main__":
     spark = spark_session()
     spark.sparkContext.setLogLevel("ERROR")
     df = import_data(spark)
+    values_to_remove = ["ALL", "WORLD"]
+    df = df.filter(~df["CODE"].isin(values_to_remove))
     # data_validation(spark, df)
-    # test = data_validation(spark, df)
-    test = spark.read.option("header", True) \
-                   .option("inferSchema", True) \
-                    .option("quote", '"') \
-                    .option("escape", '"') \
-                    .option("multiLine", True) \
-                    .option("mode", "PERMISSIVE") \
-                    .csv("data/verif_result/part-00000-93b544e4-ae60-41b8-86a0-df9807d08e4a-c000.csv", header=True)
-    test.show()
-    problems = get_failed_checks(test)
+    test = data_validation(spark, df)
+    # test = spark.read.option("header", True) \
+    #                .option("inferSchema", True) \
+    #                 .option("quote", '"') \
+    #                 .option("escape", '"') \
+    #                 .option("multiLine", True) \
+    #                 .option("mode", "PERMISSIVE") \
+    #                 .csv("data/verif_result/part-00000-93b544e4-ae60-41b8-86a0-df9807d08e4a-c000.csv", header=True)
+    # test.show()
+    # Run the problem extraction
+    problems = extract_problematic_rows(df, test)
+
+    # Display or export each issue separately
+    for problem_name, problem_df in problems.items():
+        print(f"\n🔎 Problem detected: {problem_name}")
+        problem_df.show(truncate=False)
+        problem_df.coalesce(1).write.csv(f"data/problems/problem_{problem_name}.csv", header=True, mode="overwrite")
 
     spark.stop()
     
