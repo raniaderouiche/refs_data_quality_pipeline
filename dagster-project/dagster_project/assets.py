@@ -22,7 +22,7 @@ from scripts.detection_comparison import comparison
 from scripts.locations_preprocessing import preprocess_continents, assign_country_to_correct_continent, correcting_hierarchies, add_parent_column, assign_level_numbers, merging, adding_official_level_names
 
 
-from deequ.quality_validation import import_data, data_validation
+from deequ.quality_validation import import_data, deequ_quality_check
 
 @resource
 def spark_session():
@@ -40,10 +40,10 @@ def import_data_asset(context):
 
 @asset(description="Explores the data using Deequ's analysis tools.",
        required_resource_keys={"spark_session"})
-def deequ_data_validation(context,import_data_asset):
-    df = import_data_asset
+def deequ_data_validation(context,adding_official_level_names_asset):
+    df,missing_rows = adding_official_level_names_asset
     spark_session = context.resources.spark_session
-    data_validation(spark_session, df)
+    deequ_quality_check(spark_session, df)
 
 # @asset(description="Explores the data using Deequ's analysis tools.",
 #        required_resource_keys={"spark_session"})

@@ -268,6 +268,22 @@ def extract_problematic_rows(df, validation_result):
 
     return problems
 
+def deequ_quality_check(spark, df):
+    df = spark.createDataFrame(df)
+    values_to_remove = ["ALL", "WORLD"]
+    df = df.filter(~df["CODE"].isin(values_to_remove))
+    # data_validation(spark, df)
+    test = data_validation(spark, df)
+    problems = extract_problematic_rows(df, test)
+
+    # Display or export each issue separately
+    for problem_name, problem_df in problems.items():
+        print(f"\n🔎 Problem detected: {problem_name}")
+        problem_df.show(truncate=False)
+        problem_df.coalesce(1).write.csv(f"data/problems/problem_{problem_name}", header=True, mode="overwrite")
+    
+    return problems
+
 if __name__ == "__main__":
     spark = spark_session()
     spark.sparkContext.setLogLevel("ERROR")
