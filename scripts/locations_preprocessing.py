@@ -217,6 +217,7 @@ def merging(df, countries_with_corrected_hierarchies, continents):
 
     # Find rows in data_raw whose CODE does not exist in locations
     missing_in_locations = data_raw[~data_raw['CODE'].isin(locations_processed['CODE'])]
+    missing_in_locations.to_csv('../data/results/outlier_locations.csv', index=False, encoding='utf-8')
 
     return locations_processed, missing_in_locations
 

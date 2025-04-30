@@ -1,3 +1,5 @@
+### This script is currently not being used. It is a reference for the time being. ###
+
 import os
 os.environ["SPARK_VERSION"] = "3.5" 
 

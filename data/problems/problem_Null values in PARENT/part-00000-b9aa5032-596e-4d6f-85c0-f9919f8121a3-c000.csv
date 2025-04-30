@@ -1,0 +1,13 @@
+NAME,CODE,HIERARCHY,IS_GROUP,CHILDREN,LEVEL_NAME,PARENT,LEVEL_NUMBER,OFFICIAL_LEVEL_NAME
+US/SAM/SAF,SAM_EU,US_SAM_SAF,true,[],,,,
+SAM/EU,SAM_EU,SAM_EU,true,[],,,,
+,IND_OCE,IND_OCE,false,,REGION,,,
+Vĩnh Phúc,VINH,VINH,false,,REGION,,,
+Alexandria & Dekheila Port,ADP,ADP,false,,PORT_TERMINAL,,,
+"Nigeria, Ghana and Cameroon",NGAGHACMR,ALL#WORLD#AFR#NGAGHACMR,true,[],,,,
+Benelux,BENLUX,ALL#WORLD#EUR#BENLUX,true,"[
+  \"ANTWERP\",
+  \"AMS\",
+  \"ROTTE\",
+  \"GHENT\"
+]",,,,

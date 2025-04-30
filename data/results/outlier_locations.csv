@@ -1,0 +1,697 @@
+NAME,CODE,HIERARCHY,IS_GROUP,CHILDREN,LEVEL_NAME
+East Coast India,AREA_ECI,ALL#WORLD#AREA_ECI,False,,REGION
+US/SAM/SAF,US_SAM_SAF,US_SAM_SAF,True,[],
+SAM/EU,SAM_EU,SAM_EU,True,[],
+Indian Ocean,IND_OCE,IND_OCE,False,,REGION
+Vĩnh Phúc,VINH,VINH,False,,REGION
+Alexandria & Dekheila Port,ADP,ADP,False,,PORT_TERMINAL
+"Nigeria, Ghana and Cameroon",NGAGHACMR,ALL#WORLD#AFR#NGAGHACMR,True,[],
+PADD 6,PADD6,PADD6,True,"[
+  ""PRI"",
+  ""VIR""
+]",
+Mexico and Chile,MEX_CHL,ALL#WORLD#Americas#LATIN#MEX_CHL,True,[],
+Santos and Tubarao,STS_TUBA,STS_TUBA,True,"[
+  ""TUBA"",
+  ""SANTO""
+]",
+France and United Kingdom,FRAGBR,FRAGBR,True,"[
+  ""FRA"",
+  ""GBR""
+]",
+Highland Papua,HGHPAPUA,HGHPAPUA,False,,CITY
+CENTRAL BUENOS AIRES,C_BUENOSAIRES,C_BUENOSAIRES,False,,REGION
+Schleswig-Holstein / Hamburg,SCHLESWIG-HOLSTEIN-HAMBURG,ALL#WORLD#EUR#DEU#SCHLESWIG-HOLSTEIN-HAMBURG,True,[],
+WASDE_Former_Soviet_Union,FSU,ALL#WORLD#FSU,False,,COUNTRY_GROUP
+WASDE Major Importers,MAJIMP,MAJIMP,False,,COUNTRY_GROUP
+O Hare,O_HARE,ALL#WORLD#NOAME#USA#O_HARE,True,[],
+Cameroon and Senegal,CMRSEN,ALL#WORLD#WESTA#CMRSEN,True,[],
+East Mediterranea,E_MEDIS,ALL#WORLD#MEDIS#E_MEDIS,False,,REGION
+Alexanderbay,ALEXBAY,ALEXBAY,False,,CITY
+GRANIT PORT,GRANIT_PORT,GRANIT_PORT,False,,PORT_TERMINAL
+Jalalabad,JALALABD,ALL#WORLD#ASIA#PAK#JALALABD,True,[],
+England South West,EN-SW,EN-SW,False,,REGION
+Kabul,KABUL,ALL#WORLD#ASIA#PAK#KABUL,True,[],
+Gran Canaria,GRAN_CANARIA,GRAN_CANARIA,False,,PORT_TERMINAL
+US Gulf and Europe,USG_EU,USG_EU,True,[],
+Turkey and Libya,TURLBY,ALL#WORLD#AFRMI#TURLBY,True,[],
+South Atlantic,S_ATL,S_ATL,False,,REGION
+Tradeflow USA HRW,USAHRW,USAHRW,True,"[
+  ""USA""
+]",
+Ibeju Lekki,IBJ_LEK,ALL#WORLD#WESTA#NGA#IBJ_LEK,True,[],
+EU27,EU27,ALL#WORLD#EU27,False,,COUNTRY_GROUP
+Gangavaram Port,GANGAVARAM,GANGAVARAM,False,,PORT_TERMINAL
+Vĩnh Long,VINH_LONG,VINH_LONG,False,,REGION
+ HAMBURGMITTE ,DEHTJ,HAMB#DEHTJ,False,,ALL
+Europe Middle East and Africa,EMEA,ALL#WORLD#EMEA,False,,REGION
+Latin America,LATIN,ALL#WORLD#Americas#LATIN,False,,COUNTRY_GROUP
+Segamat District,SEGAMAT,SEGAMAT,False,,FEDERAL_DISTRICT
+Luanda and Lomé,LUAN_LOME,LUAN_LOME,True,"[
+  ""LUAN"",
+  ""LOME""
+]",
+Black Sea and South America,BSEA_SOAME,BSEA_SOAME,True,[],
+West Cast South America,AREA_WCSA,ALL#WORLD#AREA_WCSA,False,,REGION
+Vietnam and Indonesia,VNMIDN,VNMIDN,True,"[
+  ""IDN"",
+  ""VNM""
+]",
+"Argentina, Brazil and South Africa",ARG_BRA_SAF,ARG_BRA_SAF,False,,COUNTRY_GROUP
+Argentina and Brazil,ARNBR,ARNBR,True,"[
+  ""BRA"",
+  ""ARG""
+]",
+Red Sea,REDSEA,ALL#WORLD#AFRMI#REDSEA,False,,REGION
+North Coast South America,AREA_NCSA,ALL#WORLD#AREA_NCSA,False,,REGION
+PADD 5 (West Coast),PADD5,PADD5,True,"[
+  ""ALASK"",
+  ""HAWAI"",
+  ""ARIZO"",
+  ""NEVAD"",
+  ""CALIF"",
+  ""OREGO"",
+  ""WASHI""
+]",
+Karaikal,KARAIKAL,KARAIKAL,False,,CITY
+Aps,PORT_APS,PORT_APS,False,,PORT_TERMINAL
+Turkey and Egypt,TUR_EGY,TUR_EGY,True,"[
+  ""EGY"",
+  ""TUR""
+]",
+PARAGUAI,PRG,CENTRAL_SOUTH_AMERICA#PRG,False,,REGION
+North Europe,N_EU,ALL#WORLD#EUR#N_EU,False,,REGION
+AUSTRALASIA & OCEANIA,AUSTRALASIA_OCEANIA,AUSTRALASIA_OCEANIA,False,,REGION
+Ras Al Khaimah,RAS_AL_KHAIMAH,ALL#WORLD#UAE#RAS_AL_KHAIMAH,True,[],
+Kenya / Mozambique,KEN_MOZ,KEN_MOZ,True,"[
+  ""KEN"",
+  ""MOZ""
+]",
+Bentong,BENTONG,BENTONG,False,,CITY
+PT/KU/UL,PT_KU_UL,ALL#WORLD#ASIA#KOR#PT_KU_UL,True,"[
+  ""PYEON"",
+  ""KUN"",
+  ""ULSAN""
+]",
+"Russia, Ukraine",RUS_UKR,RUS_UKR,False,,REGION
+Santos Tubarao Itacoatiara Barcarena,STS_TUB_ITA_BARCA,STS_TUB_ITA_BARCA,True,"[
+  ""TUBA"",
+  ""ITAAM"",
+  ""SANTO"",
+  ""BARCA""
+]",
+England Eastern,EN-EA,EN-EA,False,,REGION
+EU28,EU28,ALL#WORLD#EUR#EU28,False,,COUNTRY_GROUP
+Indonesia and Myanmar,INDMYAN,INDMYAN,True,"[
+  ""IDN"",
+  ""MMR""
+]",
+Kuwait and Oman,KWTOMN,ALL#WORLD#MIDDL#KWTOMN,True,[],
+Hamad,HAMAD,ALL#WORLD#ASIA#IND#HAMAD,False,,COUNTRY
+Hargshamn,HARSSHAMN,HARSSHAMN,False,,PORT_TERMINAL
+ESKIHOLDEN,ESKIHOL,ESKIHOL,False,,PORT_TERMINAL
+NASS USA Others,NASS_USAOTHERS,ALL#WORLD#NOAME#USA#NASS_USAOTHERS,True,[],
+West Pacific,W_PAC,W_PAC,False,,REGION
+Ciskei,CISKEI,ALL#WORLD#AFR#CISKEI,False,,COUNTRY
+PADD 2 (Midwest),PADD2,PADD2,True,"[
+  ""KENTU"",
+  ""TENNE"",
+  ""ILLIN"",
+  ""INDIA"",
+  ""MICHI"",
+  ""OHIO"",
+  ""WISCO"",
+  ""NEBRA"",
+  ""NODAK"",
+  ""SODAK"",
+  ""KANSA"",
+  ""OKLAH"",
+  ""IOWA"",
+  ""MINNE"",
+  ""MISSO""
+]",
+PADD 4 (Rocky Mountain),PADD4,PADD4,True,"[
+  ""IDAHO"",
+  ""UTAH"",
+  ""WYOMI"",
+  ""MONTA"",
+  ""COLOR""
+]",
+US Gulf and South America,USG_SOAME,USG_SOAME,True,[],
+Constanta Varna Burgas,CVB,CVB,True,"[
+  ""CONST"",
+  ""VARNC"",
+  ""BURGB""
+]",
+West Coast Central America,AREA_WCCA,ALL#WORLD#AREA_WCCA,False,,REGION
+Shandong and Henan,Shandong_Henan,ALL#WORLD#ASIA#CHN#Shandong_Henan,True,"[
+  ""SHAND"",
+  ""HENAN""
+]",
+Australia and New Zealand,AUSNZL,AUSNZL,True,"[
+  ""NZL"",
+  ""AUS""
+]",
+Kenya/Uganda,KEN_UGA,KEN_UGA,True,"[
+  ""KEN"",
+  ""UGA""
+]",
+Tradeflow USA SRW,USASRW,USASRW,True,"[
+  ""USA""
+]",
+Gorj,GORJ,ALL#WORLD#EUR#ROU#GORJ,False,,COUNTRY
+Mid-Mississippi,MIDMISS,ALL#WORLD#NOAME#USA#DELTA#MISSI#MIDMISS,True,[],
+"Russia, USA",RUS_USA,ALL#WORLD#RUS_USA,False,,ALL
+Vietnam and Malaysia,VNM_MYS,VNM_MYS,True,"[
+  ""MYS"",
+  ""VNM""
+]",
+North Scotland,NSCOT,NSCOT,False,,REGION
+parcel Port,PARCEL_PORT,PARCEL_PORT,False,,PORT_TERMINAL
+CENTRAL & SOUTH AMERICA,CENTRAL_SOUTH_AMERICA,CENTRAL_SOUTH_AMERICA,False,,REGION
+South Lanao,SOUTHLANAO,SOUTHLANAO,False,,NATIONAL_REGION
+Russia and Finland,RUSFIN,RUSFIN,True,"[
+  ""FIN"",
+  ""RUS""
+]",
+Hungary and Sweden,HUNSWE,ALL#WORLD#EUR#HUNSWE,True,[],
+Kenya and Uganda,KENUGA,ALL#WORLD#AFR#KENUGA,True,[],
+American Ports,AMERICANPORTS,ALL#WORLD#Americas#AMERICANPORTS,True,[],
+Europe (including UK),EUR_UK,ALL#WORLD#EUR#EUR_UK,False,,COUNTRY_GROUP
+Egypt and Libya,EGYLBY,ALL#WORLD#NOAFR#EGYLBY,True,[],
+US/AUS,US_AUS,US_AUS,True,[],
+Europe Region 3,EUR3,EUR3,True,"[
+  ""ESP"",
+  ""GRC"",
+  ""HRV"",
+  ""ITA"",
+  ""PRT"",
+  ""ROU""
+]",
+Other Asia,OTHER_ASIA,ALL#WORLD#ASIA#OTHER_ASIA,False,,COUNTRY_GROUP
+Europe Region 1,EUR1,EUR1,True,"[
+  ""CZE"",
+  ""DNK"",
+  ""FIN"",
+  ""HUN"",
+  ""LTU"",
+  ""POL"",
+  ""SVK"",
+  ""SWE"",
+  ""AUT""
+]",
+ Extra-Regio NUTS 1,EUR_EX_REG_NUT1,ALL#WORLD#EUR#EUR_EX_REG_NUT1,False,,REGION
+Central Papua,CNTPAPUA,CNTPAPUA,False,,CITY
+Jebel Ali,PORT_AEJEA,PORT_AEJEA,False,,PORT_TERMINAL
+NOIRMOUTIERENL'ILE,FRNOI,FRNOI,False,,CITY
+hola,AMIGOS,ALL#WORLD#AMIGOS,True,[],
+Brazil North-Northeast (NNE),BRA_NNE,ALL#WORLD#Americas#SOAME#BRA#BRA_NNE,True,"[
+  ""BRANO"",
+  ""BRANE""
+]",
+Central Atlantic,PADD1B,PADD1#PADD1B,True,"[
+  ""DCOLU"",
+  ""DELAW"",
+  ""MARYL"",
+  ""NEWJE"",
+  ""NEWYO"",
+  ""PENNS""
+]",
+Yorkshire and Humber,YRK-HUM,ALL#WORLD#EUR#GBR#YRK-HUM,True,[],
+RDM_AMS_ZONE,RDM_AMS,RDM_AMS,True,"[
+  ""AMS"",
+  ""ROTTE""
+]",
+Berlin / Brandenburg,BERLIN-BRANDENBURG,ALL#WORLD#EUR#DEU#BERLIN-BRANDENBURG,True,[],
+Malindo,MALINDO,MALINDO,True,"[
+  ""IDN"",
+  ""MYS""
+]",
+Americas,Americas,ALL#WORLD#Americas,False,,COUNTRY_GROUP
+Tibet,TIBET,ALL#WORLD#ASIA#TIBET,False,,REGION
+World except Russia and Ukraine,WW_X_RUS_UKR,ALL#WORLD#WW_X_RUS_UKR,True,[],
+Oman and United Arab Emirates,OMNUAE,OMNUAE,True,"[
+  ""OMN"",
+  ""UAE""
+]",
+Upriver and Bahia Blanca,UPBB,UPBB,True,"[
+  ""UPRIVER"",
+  ""BABBU""
+]",
+Mozambique and Tanzania,MOZTZA,ALL#WORLD#AFR#MOZTZA,True,[],
+North Atlantic	,NO_ATLANT,NO_ATLANT,False,,REGION
+Ghana and Cameroon,GHACMR,ALL#WORLD#AFR#GHACMR,True,[],
+TURABAU,TURABAU,TURABAU,False,,PORT_TERMINAL
+Egypt and Trukey,EGYTUR,ALL#WORLD#AFRMI#EGYTUR,True,[],
+West Coast India,AREA_WCI,ALL#WORLD#AREA_WCI,False,,REGION
+Santos Tubarao Paranagua,STS_TUB_PRNG,STS_TUB_PRNG,True,"[
+  ""TUBA"",
+  ""SANTO"",
+  ""PARPA""
+]",
+NASS USA North & East,NASS_USANE,NASS_USANE,True,"[
+  ""KENTU"",
+  ""VIRGI"",
+  ""INDIA"",
+  ""OHIO"",
+  ""MARYL"",
+  ""PENNS""
+]",
+Twin Cities,TWINCITY,ALL#WORLD#NOAME#USA#DELTA#MISSI#TWINCITY,True,[],
+Congo and Cameroon,COG_CMR,COG_CMR,True,"[
+  ""CMR"",
+  ""COG""
+]",
+Indonesia and Malaysia,IDN_MYS,IDN_MYS,True,"[
+  ""IDN"",
+  ""MYS""
+]",
+Union of Soviet Socialist Republics,USSR,USSR,False,,COUNTRY_GROUP
+Midlands UK,MID-UK,MID-UK,False,,REGION
+Hamburg,HAMB,HAMB,False,,CITY
+Gola Pristan,GOLA,GOLA,False,,CITY
+Tradeflow USA SWW,USASWW,USASWW,True,"[
+  ""USA""
+]",
+Russia and Lithuania,RUSLITH,RUSLITH,True,"[
+  ""LTU"",
+  ""RUS""
+]",
+Icsaccea,ICSACCEA,ICSACCEA,False,,PORT_TERMINAL
+Balkan Wheat Producer,BALKANWHT,BALKANWHT,True,"[
+  ""BGR"",
+  ""HRV""
+]",
+Fujairah,PORT_AEFJR,PORT_AEFJR,False,,PORT_TERMINAL
+Other Oceania,OTHER_OCEAN,ALL#WORLD#OCEAN#OTHER_OCEAN,False,,COUNTRY_GROUP
+Migration,ZZUKN,ZZUKN,False,,CITY
+"USA, Brazil, Argentina, China",USA_BRZ_ARG_CHN,USA_BRZ_ARG_CHN,True,"[
+  ""BRA"",
+  ""CHN"",
+  ""USA"",
+  ""ARG""
+]",
+India and UAE,IND_UAE,IND_UAE,True,"[
+  ""IND"",
+  ""UAE""
+]",
+Federal Territory West Germany,BMEL-LOCTION-FEDERAL-TERRITORY-WEST-GERMANY,BMEL-LOCTION-FEDERAL-TERRITORY-WEST-GERMANY,False,,FEDERAL_DISTRICT
+Span Med,SPANMED,ALL#WORLD#EUR#ESP#SPANMED,True,"[
+  ""MURCIA"",
+  ""SPCAT"",
+  ""SPAND"",
+  ""SPVAL""
+]",
+Mormugao,MORMUGAO,MORMUGAO,False,,CITY
+Santos Tubarao Itaqui SaoFrancisco Paranagua,STS_TUB_ITA_SFDSA_PRNG,STS_TUB_ITA_SFDSA_PRNG,True,"[
+  ""TUBA"",
+  ""SFDSA"",
+  ""SANTO"",
+  ""PARPA""
+]",
+Continent,CONT,CONT,False,,REGION
+Taftan,TAFTAN,ALL#WORLD#ASIA#PAK#TAFTAN,True,[],
+IN/PT/KU,IN_PT_KU,ALL#WORLD#ASIA#KOR#IN_PT_KU,True,"[
+  ""PYEON"",
+  ""KUN"",
+  ""INCHE""
+]",
+ANDHRA PRADESH & TELANGANA,APTG,APTG,False,,STATE
+Changi,CHANGI,ALL#WORLD#ASIA#SGP#CHANGI,True,[],
+"Ghana, Senegal and Cameroon",GHASENCMR,ALL#WORLD#AFR#GHASENCMR,True,[],
+Lower Saxony / Bremen,LOWERSAXONY-BREMEN,ALL#WORLD#EUR#DEU#LOWERSAXONY-BREMEN,True,[],
+Barcarena Itaqui,BARCA_ITA,BARCA_ITA,True,"[
+  ""ITTAQ"",
+  ""BARCA""
+]",
+US Gulf and Black Sea,USG_BSEA,USG_BSEA,True,[],
+Saxony / Saxony-Anhalt,SAXONY-SAXONY-ANHALT,ALL#WORLD#EUR#DEU#SAXONY-SAXONY-ANHALT,True,[],
+China & Taiwan,CHN_TWN,CHN_TWN,True,[],
+Itacoatiara and Barcarena,ITA_BARCA,ITA_BARCA,True,"[
+  ""ITAAM"",
+  ""BARCA""
+]",
+PNW/AUS/CAN,PNW_AUS_CAN,PNW_AUS_CAN,True,[],
+VOLGOGRAD SILO,VOLGO_PORT,VOLGO_PORT,False,,PORT_TERMINAL
+Onne,ONNE,ALL#WORLD#WESTA#NGA#ONNE,True,[],
+China Northern Port,CHN_NPT,ALL#WORLD#ASIA#CHN#CHN_NPT,True,"[
+  ""JINZH"",
+  ""BEILIAN"",
+  ""DAYAOW"",
+  ""BAYUQ""
+]",
+England & Wales,ENGLAND_WALES,ENGLAND_WALES,False,,REGION
+Romania and Bulgaria,ROU_BUL,ALL#WORLD#BSEA#ROU_BUL,False,,REGION
+IN/PT/KU/UL,IN_PT_KU_UL,ALL#WORLD#ASIA#KOR#IN_PT_KU_UL,True,"[
+  ""PYEON"",
+  ""KUN"",
+  ""INCHE"",
+  ""ULSAN"",
+  ""BUSAN""
+]",
+Zahedan,ZAHEDAN,ALL#WORLD#AFRMI#IRN#ZAHEDAN,True,[],
+Lower Atlantic,PADD1C,PADD1#PADD1C,True,"[
+  ""NOCAR"",
+  ""VIRGI"",
+  ""WESTV"",
+  ""FLORI"",
+  ""SOCAR"",
+  ""GEORG""
+]",
+"Europe, Ukraine",EU_UKR,EU_UKR,True,"[
+  ""EUR"",
+  ""UKR""
+]",
+East_Coast_UK,EAST_COAST_UK,ALL#WORLD#EUR#GBR#EAST_COAST_UK,True,[],
+European Union 15,E15,E15,False,,COUNTRY_GROUP
+North East Asia,NE_ASIA,ALL#WORLD#ASIA#NE_ASIA,False,,REGION
+Pakistan-Bangladesh,pakban,ALL#WORLD#ASIA#pakban,True,"[
+  ""BGD"",
+  ""PAK""
+]",
+PADD4 and PADD5,PADD4_PADD5,PADD4_PADD5,True,[],
+ Extra-Regio NUTS 2,EUR_EX_REG_NUT2,ALL#WORLD#EUR#EUR_EX_REG_NUT2,False,,REGION
+Ohers Europe,EUR_OTHERS,ALL#WORLD#EUR#EUR_OTHERS,False,,COUNTRY
+Other Sub Saharan Africa,OSSA,ALL#WORLD#AFR#OSSA,False,,COUNTRY_GROUP
+England,ENG,ALL#WORLD#EUR#GBR#ENG,True,[],
+Ghana and Senegal,GHASEN,ALL#WORLD#AFR#GHASEN,True,[],
+"Russia, Ukraine, Romania, Australia",RUS_UKR_ROU_AUS,RUS_UKR_ROU_AUS,True,"[
+  ""ROU"",
+  ""RUS"",
+  ""UKR"",
+  ""AUS""
+]",
+East Coast South America Parana Area,AREA_ECSP,ALL#WORLD#AREA_ECSP,False,,REGION
+Varna Burgas,VB,VB,True,"[
+  ""VARNC"",
+  ""BURGB""
+]",
+South Papua,STHPAPUA,STHPAPUA,False,,CITY
+RUSALPHATRADE,PHA,PHA,False,,COUNTRY
+"Kenya, Mozambique and Zimbabwe",KENMOZZWE,ALL#WORLD#AFR#KENMOZZWE,True,[],
+IN/KU,IN_KU,ALL#WORLD#ASIA#KOR#IN_KU,True,"[
+  ""KUN"",
+  ""INCHE""
+]",
+US East Coast,AREA_USEC,ALL#WORLD#AREA_USEC,False,,REGION
+Mannheim and Heilbronn,MANNH_HEIL,ALL#WORLD#EUR#DEU#MANNH_HEIL,True,"[
+  ""HEIL_DEU"",
+  ""MANNH""
+]",
+PADD 3 (Gulf Coast),PADD3,PADD3,True,"[
+  ""ARKAN"",
+  ""LOUIS"",
+  ""MISSI"",
+  ""NEWME"",
+  ""ALABA"",
+  ""TEXAS""
+]",
+British Overseas Territories,UK_OST,ALL#WORLD#EUR#GBR#UK_OST,False,,COUNTRY
+Kralendijk port,KRALENDIJK,ALL#WORLD#CARIB#KRALENDIJK,False,,PORT_TERMINAL
+East Coast Africa,AREA_ECAF,ALL#WORLD#AFR#AREA_ECAF,False,,REGION
+India and Turkey,IND_TUR,ALL#WORLD#IND_TUR,True,[],
+Cairo-Memphis,CAIRMEM,ALL#WORLD#NOAME#USA#DELTA#MISSI#CAIRMEM,True,[],
+South East Asia,SE_ASIA,ALL#WORLD#SE_ASIA,False,,REGION
+South East and London,STH-LN,ALL#WORLD#EUR#GBR#STH-LN,True,[],
+Other Middle East,OTH_ME,ALL#WORLD#MIDDL#OTH_ME,False,,REGION
+"US Gulf, Europe and South Africa",USG_EU_ZAF,USG_EU_ZAF,True,[],
+Persian Gulf,PERSIAN,ALL#WORLD#MIDDL#PERSIAN,False,,REGION
+Wake Island,WAKE,WAKE,False,,TERRITORY
+Esbjerg,ESBJ,ESBJ,False,,CITY
+Senegal and Mali,SENMLI,ALL#WORLD#WESTA#SENMLI,True,[],
+"USA, South America, China",USA_SAM_CHN,USA_SAM_CHN,True,"[
+  ""CHN"",
+  ""SOAME"",
+  ""USA""
+]",
+Sabah & Sarawak,SABAH_SARAWAK,ALL#WORLD#ASIA#MYS#SABAH_SARAWAK,True,"[
+  ""SARAWAK"",
+  ""SABAH""
+]",
+Mexico and Arizona,MEX_ARIZO,MEX_ARIZO,True,[],
+NASS USA West Central,NASS_USAWC,NASS_USAWC,True,"[
+  ""NEBRA"",
+  ""KANSA"",
+  ""MISSO""
+]",
+Hesse / Rhineland-Palatinate / Saarland,HESSE-RHINELAND-PALATINATE-SAARLAND,ALL#WORLD#EUR#DEU#HESSE-RHINELAND-PALATINATE-SAARLAND,True,[],
+Valli port,VALLI_PORT,VALLI_PORT,False,,PORT_TERMINAL
+Nigeria and Ghana,NGAGHA,ALL#WORLD#AFR#NGAGHA,True,[],
+Morocco and Benin,MAR_BEN,ALL#WORLD#AFR#MAR_BEN,True,[],
+Romania and Hungary,ROUHUN,ALL#WORLD#EUR#ROUHUN,True,[],
+West Atlantic,W_ATL,W_ATL,False,,REGION
+Europe Region 2,EUR2,EUR2,True,"[
+  ""DEU"",
+  ""FRA"",
+  ""GBR"",
+  ""NLD"",
+  ""BEL""
+]",
+Europe and South africa,EU_ZAF,EU_ZAF,True,[],
+AABENRAA,AABENRAA,AABENRAA,False,,PORT_TERMINAL
+South West Papua,SWP,SWP,False,,CITY
+Johnston Island,UM-67,ALL#WORLD#UM-67,False,,REGION
+Local,LOCAL,ALL#WORLD#LOCAL,False,,COUNTRY
+PADD 5 Except California,PADD5_WO_CAL,PADD5#PADD5_WO_CAL,True,[],
+Colombia - Dominican Republic,COL_DOL,ALL#WORLD#Americas#LATIN#COL_DOL,True,[],
+USA and South America,USA_SOAME,USA_SOAME,True,[],
+Tradeflow USA HRS,USAHRS,USAHRS,True,"[
+  ""USA""
+]",
+Sichuan and Chongqing,Sich_Chong_CHN,ALL#WORLD#ASIA#CHN#Sich_Chong_CHN,True,"[
+  ""SICHU"",
+  ""CHONG""
+]",
+Okinawa,OKINAWA,OKINAWA,False,,CITY
+US Gulf and Eastern Europe,USG_EE,USG_EE,True,[],
+PADD 7,PADD7,PADD7,True,"[
+  ""ASM"",
+  ""GUM"",
+  ""MNP""
+]",
+"Russia, Romania, Bulgaria",RUS_ROU_BGR,RUS_ROU_BGR,True,"[
+  ""BGR"",
+  ""ROU"",
+  ""RUS""
+]",
+Noain,NOAIN,NOAIN,False,,CITY
+Guadalupe Island,GUD,ALL#WORLD#NOAME#GOLME#GUD,False,,COUNTRY
+New England,NEW_ENG,PADD1#NEW_ENG,True,"[
+  ""CONNE"",
+  ""MAINE"",
+  ""MASSA"",
+  ""NEWHA"",
+  ""RHODE"",
+  ""VERMO""
+]",
+Rheinland-Pfalz / Saarland,RHEINLAND-PFALZ_SAARLAND,ALL#WORLD#EUR#DEU#HESSE-RHINELAND-PALATINATE-SAARLAND#RHEINLAND-PFALZ_SAARLAND,True,"[
+  ""DE-RP"",
+  ""SAARL""
+]",
+North West Europe,NW_EUR,ALL#WORLD#EUR#NW_EUR,False,,REGION
+Torres Strait,FE_TORRES_STRAIT,ALL#WORLD#ASIAO#FE_TORRES_STRAIT,False,,TERRITORY
+Italy and Slovenia,ITA_SVN,ALL#WORLD#EUR#ITA_SVN,True,[],
+East Pacific,ES_PAC,ES_PAC,False,,REGION
+Romania and Ukraine,ROUUKR,ALL#WORLD#EUR#ROUUKR,True,[],
+Ecuador and Peru,ECUPER,ECUPER,True,"[
+  ""ECU"",
+  ""PER""
+]",
+Bistrita-Nasaud,BRINAS,ALL#WORLD#EUR#ROU#BRINAS,False,,COUNTRY
+ Northern Europe,NORD_EU,ALL#WORLD#EUR#NORD_EU,False,,REGION
+Europe and Black Sea,EUR_BSEA,EUR_BSEA,True,"[
+  ""EUR"",
+  ""BSEA""
+]",
+Egypt_SaudiArabia,EGYSAU,EGYSAU,True,"[
+  ""EGY"",
+  ""SAU""
+]",
+Tianjinxingang,TIANJIN,ALL#WORLD#ASIA#CHN#TIANJIN,True,[],
+BU/UL,BU_UL,ALL#WORLD#ASIA#KOR#BU_UL,True,"[
+  ""ULSAN"",
+  ""BUSAN""
+]",
+SAM/SAF,SAMSAF,SAMSAF,True,[],
+US Gulf Mississippi Area,AREA_USGM,ALL#WORLD#AREA_USGM,False,,REGION
+West Mediterranea,W_MEDIS,ALL#WORLD#MEDIS#W_MEDIS,False,,REGION
+Other Caribbean,OTHER_CARIB,ALL#WORLD#CARIB#OTHER_CARIB,False,,COUNTRY_GROUP
+Tradeflow Soft Wheat Europe Others,SWHT_EUR_OTH,SWHT_EUR_OTH,True,"[
+  ""BGR"",
+  ""CYP"",
+  ""CZE"",
+  ""EST"",
+  ""FIN"",
+  ""HUN"",
+  ""LUX"",
+  ""MLT"",
+  ""SVK"",
+  ""SVN"",
+  ""SWE""
+]",
+PT/KU,PT_KU,ALL#WORLD#ASIA#KOR#PT_KU,True,"[
+  ""PYEON"",
+  ""KUN""
+]",
+Great Britain North East,GBNE,GBNE,False,,REGION
+PNW/SAM,PNW_SAM,PNW_SAM,True,[],
+United Kingdom and Netherlands,GBRNLD,GBRNLD,True,"[
+  ""GBR"",
+  ""NLD""
+]",
+Jempol District,JEMPOL,JEMPOL,False,,FEDERAL_DISTRICT
+East Coast South America,AREA_ECSA,ALL#WORLD#AREA_ECSA,False,,REGION
+Heathrow,HEATHROW,ALL#WORLD#EUR#GBR#LONGR#HEATHROW,True,[],
+Czechoslovakia,CZE_SVK,ALL#WORLD#EUR#CZE_SVK,False,,COUNTRY_GROUP
+"Pacific NorthWest, Eastern Europe and South Africa",PNW_EE_ZAF,PNW_EE_ZAF,True,[],
+Tradeflow Corn Europe Others,CRN_EUR_OTH,CRN_EUR_OTH,True,"[
+  ""BGR"",
+  ""CYP"",
+  ""CZE"",
+  ""DNK"",
+  ""EST"",
+  ""FIN"",
+  ""GBR"",
+  ""GRC"",
+  ""HRV"",
+  ""HUN"",
+  ""IRL"",
+  ""LTU"",
+  ""LUX"",
+  ""LVA"",
+  ""MLT"",
+  ""POL"",
+  ""PRT"",
+  ""ROU"",
+  ""SVK"",
+  ""SVN"",
+  ""SWE"",
+  ""AUT""
+]",
+Black Sea except Russia,BSEA_EXCL_RUS,ALL#WORLD#BSEA#BSEA_EXCL_RUS,True,[],
+EU11,EUR_EU11,ALL#WORLD#EUR#EUR_EU11,False,,TERRITORY
+Australia and Pacific NorthWest,AUS_PACIG,AUS_PACIG,True,[],
+Egypt Med,EGMED,ALL#WORLD#AFRMI#EGY#EGMED,True,"[
+  ""ALEXD""
+]",
+United States and Eastern Europe,US_EE,US_EE,True,[],
+"Kenya, Tanzania, Uganda, Mozambique and Rwanda",KENTZAUGAMOZRWA,ALL#WORLD#AFR#KENTZAUGAMOZRWA,True,[],
+Sabahat,SABAHAT,ALL#WORLD#ASIA#MYS#SABAHAT,True,[],
+Benelux,BENLUX,ALL#WORLD#EUR#BENLUX,True,"[
+  ""ANTWERP"",
+  ""AMS"",
+  ""ROTTE"",
+  ""GHENT""
+]",
+England North East,EN-NE,EN-NE,False,,REGION
+PADD 1 (East Coast),PADD1,PADD1,True,"[
+  ""DCOLU"",
+  ""NOCAR"",
+  ""VIRGI"",
+  ""CONNE"",
+  ""DELAW"",
+  ""MAINE"",
+  ""MARYL"",
+  ""MASSA"",
+  ""NEWHA"",
+  ""NEWJE"",
+  ""NEWYO"",
+  ""PENNS"",
+  ""RHODE"",
+  ""VERMO"",
+  ""FLORI"",
+  ""SOCAR""
+]",
+Balkans,BALKAN,ALL#WORLD#EUR#BALKAN,False,,REGION
+US Gulf and SAF,USG_ZAF,USG_ZAF,True,[],
+NASS USA South West & Pacific,NASS_USASW,NASS_USASW,True,"[
+  ""NOCAR"",
+  ""ARKAN"",
+  ""LOUIS"",
+  ""MISSI"",
+  ""CALIF"",
+  ""ALABA"",
+  ""SOCAR"",
+  ""GEORG""
+]",
+ European Free Trade Association,EUR_FREE_TRAD_ASSO,ALL#WORLD#EUR#EUR_FREE_TRAD_ASSO,False,,TERRITORY
+Other FSU,OTHER_FSU,ALL#WORLD#CIS#OTHER_FSU,False,,COUNTRY_GROUP
+CIS,CIS,ALL#WORLD#CIS,False,,REGION
+EAST_AFRICA,EASTA,ALL#WORLD#EASTA,False,,REGION
+Tanzania and Rwanda,TZARWA,ALL#WORLD#AFR#TZARWA,True,[],
+Not Available,,ALL#N/A,False,,WORLD
+CTL_AMERICA_AND_CBI,CTLAM,ALL#WORLD#CTLAM,False,,REGION
+EAST_EU,EASTE,ALL#WORLD#EASTE,False,,REGION
+MIDDLE_EAST,MIDDL,ALL#WORLD#MIDDL,False,,REGION
+Black Sea Europe,BSEEU,ALL#WORLD#BSEA#BSEEU,False,,COUNTRY_GROUP
+Black Sea ex Europe,BSENE,ALL#WORLD#BSEA#BSENE,False,,COUNTRY_GROUP
+Mediterranean Sea,MEDIS,ALL#WORLD#MEDIS,False,,REGION
+Europe Mediterranean Sea,EMEDI,ALL#WORLD#EUR#EMEDI,False,,NATIONAL_REGION
+Baltic Sea Europe,BALEU,ALL#WORLD#BALTI#BALEU,False,,COUNTRY_GROUP
+NORTH_AFRICA,NOAFR,ALL#WORLD#NOAFR,False,,REGION
+Moselle River,MOSEL,ALL#WORLD#EUR#MOSEL,False,,NATIONAL_REGION
+Black Sea Big Ports,BSEBP,ALL#WORLD#BSEBP,False,,REGION
+Black Sea Middle Ports,BSEMP,ALL#WORLD#BSEMP,False,,REGION
+Black Sea Small Ports,BSESP,ALL#WORLD#BSESP,False,,REGION
+Upriver and Santos,UPTOS,ALL#WORLD#Americas#SOAME#UPTOS,False,,COUNTRY_GROUP
+WASDE Major Exporters,EXP,ALL#WORLD#EXP,False,,REGION
+BRITISH WEST INDIES,BRITI,ALL#WORLD#BRITI,False,,COUNTRY_GROUP
+CENTRAL_WEST_AFRICA,CWA,ALL#WORLD#CWA,False,,REGION
+Ocean,OCEAN,ALL#WORLD#OCEAN,False,,COUNTRY_GROUP
+OTHERS_SAM,OSAM,ALL#WORLD#OSAM,False,,REGION
+OTHERS_SOUTH_EAST_AFRICA,OSEA,ALL#WORLD#OSEA,False,,REGION
+SOUTH_EAST_AFRICA,SOEAF,ALL#WORLD#SOEAF,False,,REGION
+SOUTH_EAST_ASIA_EXCL_CHN,SOAEC,ALL#WORLD#SOAEC,False,,REGION
+Palestinian Territory (Occupied),PSE,ALL#WORLD#MIDDL#PSE,False,,COUNTRY
+WEST_AFRICA,WESTA,ALL#WORLD#WESTA,False,,REGION
+WEST_EU,WESTE,ALL#WORLD#WESTE,False,,REGION
+Holy See (Vatican City State),VAT,ALL#WORLD#WESTE#VAT,False,,COUNTRY
+Virgin Islands (U.S.),VIR,ALL#WORLD#CARIB#VIR,False,,COUNTRY
+Aland Islands,ALA,ALL#WORLD#ALA,False,,COUNTRY
+Rest of the World,ROW,ALL#ROW,False,,WORLD
+Black Sea,BSEA,ALL#WORLD#BSEA,False,,REGION
+6 ports,SIXP,ALL#WORLD#SIXP,False,,REGION
+East Coast,EASTC,ALL#WORLD#EASTC,False,,REGION
+West Coast,WESTC,ALL#WORLD#WESTC,False,,REGION
+Baltic Sea,BALTI,ALL#WORLD#BALTI,False,,REGION
+Lower Danube Euroregion,LOWDA,ALL#WORLD#EUR#LOWDA,False,,NATIONAL_REGION
+Adriatic Sea,ADRSE,ALL#WORLD#ADRSE,False,,NATIONAL_REGION
+French Southern Territories,ATF,ALL#WORLD#ATF,False,,COUNTRY
+Great Lakes,GREAT,ALL#WORLD#NOAME#GREAT,False,,NATIONAL_REGION
+Western Sahara,ESH,ALL#WORLD#ESH,False,,COUNTRY
+FRENCH WEST INDIES,FRENC,ALL#WORLD#FRENC,False,,COUNTRY_GROUP
+Gulf of Mexico,GOLME,ALL#WORLD#NOAME#GOLME,False,,NATIONAL_REGION
+AFRICA_EXCL_NTH,AFREN,ALL#WORLD#AFREN,False,,REGION
+LEEWARD-WINDWARD,LEEWA,ALL#WORLD#LEEWA,False,,COUNTRY_GROUP
+AFRICA_MIDDLEEAST,AFRMI,ALL#WORLD#AFRMI,False,,REGION
+Others,OTHER,ALL#WORLD#OTHER,False,,COUNTRY
+Pitcairn,PCN,ALL#WORLD#PCN,False,,COUNTRY
+Serbia And Montenegro,SERBI,ALL#WORLD#EASTE#SERBI,False,,COUNTRY_GROUP
+Kosovo,KOSOV,ALL#WORLD#EASTE#KOSOV,False,,NATIONAL_REGION
+Gaza Strip,GASTR,ALL#WORLD#MIDDL#PSE#GASTR,False,,NATIONAL_REGION
+West Bank,WBANK,ALL#WORLD#MIDDL#WBANK,False,,NATIONAL_REGION
+ASIA_OCEANIA,ASIAO,ALL#WORLD#ASIAO,False,,REGION
+Timor-Leste,TLS,ALL#WORLD#TLS,False,,COUNTRY
+United States Minor Outlying Islands,UMI,ALL#WORLD#UMI,False,,COUNTRY
+Yugoslavia,YUGOS,ALL#WORLD#YUGOS,False,,COUNTRY_GROUP
+CARIBBEAN,CARIB,ALL#WORLD#CARIB,False,,REGION
+OPL West Africa,PORT_OWA,ALL#WORLD#WESTA#PORT_OWA,False,,PORT_TERMINAL
+EU13,EUR_EU13,ALL#WORLD#EUR#EUR_EU13,False,,TERRITORY
+Saudi Arabia/Oman,SAU_OMN,SAU_OMN,True,"[
+  ""OMN"",
+  ""SAU""
+]",
+Federal Territory East Germany,BMEL-LOCTION-FEDERAL-TERRITORY-EAST-GERMANY,BMEL-LOCTION-FEDERAL-TERRITORY-EAST-GERMANY,False,,FEDERAL_DISTRICT
+Nour,NOUR,ALL#ROW#NOUR,True,[],
+NASS USA North Central,NASS_USANC,NASS_USANC,True,"[
+  ""MICHI"",
+  ""NODAK"",
+  ""SODAK"",
+  ""MINNE""
+]",
+ South East Asia,AREA_SEA,ALL#WORLD#ASIA#AREA_SEA,False,,REGION
+Santos Tubarao Barcarena,STS_TUB_BARCA,STS_TUB_BARCA,True,"[
+  ""TUBA"",
+  ""SANTO"",
+  ""BARCA""
+]",
