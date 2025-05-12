@@ -147,11 +147,11 @@ def get_failed_checks(check_results_df):
 # Placeholder for your custom duplicate detection
 def detect_duplicates(df):
     window_spec = (
-        df.groupBy("NAME")
+        df.groupBy(["CODE"])
           .agg(F.count("*").alias("count"))
           .filter(F.col("count") > 1)
     )
-    duplicates = df.join(window_spec, on="NAME", how="inner")
+    duplicates = df.join(window_spec, on="CODE", how="inner")
     return duplicates
 
 def extract_problematic_rows(df, validation_result):
@@ -207,8 +207,11 @@ def extract_problematic_rows(df, validation_result):
                     ~df[col].cast("string").isNotNull()
                 )
 
-        elif constraint.startswith("DistinctnessConstraint"):
-            problems["Duplicate NAME entries"] = detect_duplicates(df)
+        # elif constraint.startswith("DistinctnessConstraint"):
+        #     problems["Duplicate NAME entries"] = detect_duplicates(df)
+
+        elif constraint.startswith("UniquenessConstraint"):
+            problems["Duplicate CODE entries"] = detect_duplicates(df)
 
         elif constraint.startswith("PatternMatchConstraint") and "HIERARCHY" in constraint:
             problems["Incorrect HIERARCHY pattern"] = df.filter(
@@ -280,10 +283,46 @@ def deequ_quality_check(spark, df):
     for problem_name, problem_df in problems.items():
         print(f"\n🔎 Problem detected: {problem_name}")
         problem_df.show(truncate=False)
+        problem_df = problem_df.withColumn("problem_name", F.lit(problem_name))
         problem_df.coalesce(1).write.csv(f"data/problems/problem_{problem_name}", header=True, mode="overwrite")
+        output_path = f"data/problems/problem_{problem_name}"
+        # Construct the full path to the part file
+        part_file_path = os.path.join(output_path, "part-00000-*")
+        custom_file_name = f"{problem_name}.csv"
+        matching_files = glob.glob(part_file_path)
+
+        if matching_files:
+            source_file = matching_files[0]
+            destination_file = os.path.join("data/problems/", custom_file_name)
+
+            # Check if the destination file already exists
+            if os.path.exists(destination_file):
+                try:
+                    os.remove(destination_file)
+                    print(f"Existing file '{destination_file}' overwritten.")
+                except OSError as e:
+                    print(f"Error: Could not delete existing file '{destination_file}': {e}")
+                    # You might want to handle this error more gracefully, e.g., skip renaming
+                    exit(1)  # Or some other error handling
+            try:
+                os.rename(source_file, destination_file)
+                print(f"Renamed '{source_file}' to '{destination_file}'")
+            except OSError as e:
+                print(f"Error: Could not rename file '{source_file}' to '{destination_file}': {e}")
+
+
+            # Optionally, remove the empty folder created by Spark
+            try:
+                shutil.rmtree(output_path)
+            except OSError as e:
+                print(f"Warning: Could not remove the output directory '{output_path}'. It might not be empty: {e}")
+        else:
+            print(f"Error: No part file found in '{output_path}'.")
     
     return problems
 
+import glob
+import shutil
 if __name__ == "__main__":
     spark = spark_session()
     spark.sparkContext.setLogLevel("ERROR")
@@ -298,7 +337,42 @@ if __name__ == "__main__":
     for problem_name, problem_df in problems.items():
         print(f"\n🔎 Problem detected: {problem_name}")
         problem_df.show(truncate=False)
+        # problem_df = problem_df.withColumn("problem_name", F.lit(problem_name))
+        problem_df = problem_df.select("NAME", "CODE", "HIERARCHY", "IS_GROUP", "CHILDREN", "LEVEL_NAME", "PARENT", "LEVEL_NUMBER", "OFFICIAL_LEVEL_NAME")
         problem_df.coalesce(1).write.csv(f"data/problems/problem_{problem_name}", header=True, mode="overwrite")
+        output_path = f"data/problems/problem_{problem_name}"
+        # Construct the full path to the part file
+        part_file_path = os.path.join(output_path, "part-00000-*")
+        custom_file_name = f"{problem_name}.csv"
+        matching_files = glob.glob(part_file_path)
+
+        if matching_files:
+            source_file = matching_files[0]
+            destination_file = os.path.join("data/problems/", custom_file_name)
+
+            # Check if the destination file already exists
+            if os.path.exists(destination_file):
+                try:
+                    os.remove(destination_file)
+                    print(f"Existing file '{destination_file}' overwritten.")
+                except OSError as e:
+                    print(f"Error: Could not delete existing file '{destination_file}': {e}")
+                    # You might want to handle this error more gracefully, e.g., skip renaming
+                    exit(1)  # Or some other error handling
+            try:
+                os.rename(source_file, destination_file)
+                print(f"Renamed '{source_file}' to '{destination_file}'")
+            except OSError as e:
+                print(f"Error: Could not rename file '{source_file}' to '{destination_file}': {e}")
+
+
+            # Optionally, remove the empty folder created by Spark
+            try:
+                shutil.rmtree(output_path)
+            except OSError as e:
+                print(f"Warning: Could not remove the output directory '{output_path}'. It might not be empty: {e}")
+        else:
+            print(f"Error: No part file found in '{output_path}'.")
 
     spark.stop()
     
