@@ -11,9 +11,9 @@ def bert(data):
         axis=1
     )
     # Select relevant columns for similarity check (after comparison with static search)
-    # df["text"] = df[["NAME", "PARENT" , "LEVEL_NAME", "HIERARCHY"]].astype(str).agg(" ".join, axis=1)
+    df["text"] = df[["NAME"]].astype(str).agg(" ".join, axis=1)
 
-    df["text"] = df[["NAME", "OFFICIAL_LEVEL_NAME" , "PARENT", "LEVEL_NUMBER"]].astype(str).agg(" - ".join, axis=1)
+    # df["text"] = df[["NAME", "OFFICIAL_LEVEL_NAME" , "PARENT", "LEVEL_NUMBER"]].astype(str).agg(" - ".join, axis=1)
 
 
     # Load DistilBERT model
@@ -26,7 +26,7 @@ def bert(data):
     similarity_matrix = util.pytorch_cos_sim(embeddings, embeddings)
 
     # Set similarity threshold
-    threshold = 0.99  # Adjust as needed
+    threshold = 0.9  # Adjust as needed
 
     # Identify duplicates
     visited = set()
@@ -51,5 +51,12 @@ def bert(data):
         final_df = pd.concat([final_df, first_occurrence, remaining], ignore_index=True)
 
     final_df.drop(columns=["text"], inplace=True)
-    final_df.to_csv("../data/results/duplicates.csv", index=False)
+    final_df.to_csv("data/results/port_terminals_duplicates_thresh_96.csv", index=False)
     return final_df
+
+
+if __name__ == "__main__":
+    # Example usage
+    data = pd.read_csv("data/port_terminals.csv")
+    result = bert(data)
+    print("File Saved")

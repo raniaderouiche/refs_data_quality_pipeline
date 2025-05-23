@@ -12,7 +12,8 @@ from pydeequ.analyzers import *
 from pyspark.sql.functions import regexp_replace,when, col
 from pyspark.sql.functions import col, size, split
 from pyspark.sql import functions as F
-import re
+import glob
+import shutil
 from pyspark.sql import functions as F
 from pyspark.sql import types as T
 from pyspark.sql.types import StringType, BooleanType, IntegerType, ArrayType
@@ -87,7 +88,7 @@ def data_validation(spark, df):
         )\
         .satisfies(
             "false",  # placeholder
-            "Missing hierarchies",
+            "Missing HIERARCHY",
             lambda x: x >= 1.0
         )\
         .satisfies(
@@ -119,7 +120,7 @@ def data_validation(spark, df):
 
     verificationResult_df = VerificationResult.checkResultsAsDataFrame(spark, verificationResult)
     try:
-        verificationResult_df.coalesce(1).write.csv("file:///C:/Users/Rania/Documents/PFE/refs_data_quality_pipeline/data/verif_result", header=True, mode="overwrite")
+        save_deequ_verif_suite(verificationResult_df)
         return verificationResult_df
     except Exception as e:
         print(f"Error writing CSV file: {e}")
@@ -131,6 +132,41 @@ def detect_wrong_country_hierarchy(df):
     )
 
     return problematic_rows
+
+def save_deequ_verif_suite(verificationResult_df):
+    verificationResult_df.coalesce(1).write.csv("file:///C:/Users/Rania/Documents/PFE/refs_data_quality_pipeline/data/verif_result", header=True, mode="overwrite")
+
+    output_path = f"data/verif_result"
+    file_name = "deequ_verif_result"
+
+    # Construct the full path to the part file
+    part_file_path = os.path.join(output_path, "part-00000-*")
+    custom_file_name = f"{file_name}.csv"
+    matching_files = glob.glob(part_file_path)
+
+    if matching_files:
+        source_file = matching_files[0]
+        destination_file = os.path.join("data/results/", custom_file_name)
+
+        # Step 1: Delete the existing file (if it exists)
+        if os.path.exists(destination_file):
+            try:
+                if os.path.isfile(destination_file):
+                    os.remove(destination_file)
+            except Exception as e:
+                print(f"Error deleting {destination_file}: {e}")
+
+        os.rename(source_file, destination_file)
+        print(f"Renamed '{source_file}' to '{destination_file}'") 
+
+        # Optionally, remove the empty folder created by Spark
+        try:
+            shutil.rmtree(output_path)
+        except OSError as e:
+            print(f"Warning: Could not remove the output directory '{output_path}'. It might not be empty: {e}")
+    else:
+        print(f"Error: No part file found in '{output_path}'.")
+
 
 def get_failed_checks(check_results_df):
     failing_constraints = (
@@ -186,24 +222,24 @@ def extract_problematic_rows(df, validation_result):
 
         if constraint.startswith("CompletenessConstraint"):
             col_name = constraint.split("Completeness(")[1].split(",")[0]
-            problems[f"Null values in {col_name}"] = df.filter(F.col(col_name).isNull())
+            problems[f"CompletenessConstraint - Null values in {col_name}"] = df.filter(F.col(col_name).isNull())
 
         elif constraint.startswith("AnalysisBasedConstraint(DataType("):
             col = constraint.split("DataType(")[1].split(",")[0]
             if col == "LEVEL_NUMBER":
-                problems[f"{col} has incorrect datatype"] = df.filter(
+                problems[f"AnalysisBasedConstraint - {col} has incorrect datatype"] = df.filter(
                     ~df[col].cast("int").isNotNull()
                 )
             elif col == "IS_GROUP":
-                problems[f"{col} has incorrect datatype"] = df.filter(
+                problems[f"AnalysisBasedConstraint - {col} has incorrect datatype"] = df.filter(
                     ~df[col].cast("boolean").isNotNull()
                 )
             elif col == "CHILDREN":
-                problems[f"{col} has incorrect datatype"] = df.filter(
+                problems[f"AnalysisBasedConstraint - {col} has incorrect datatype"] = df.filter(
                     df[col].isNotNull() & ~df[col].cast("array<string>").isNotNull()
                 )
             else:
-                problems[f"{col} has incorrect datatype"] = df.filter(
+                problems[f"AnalysisBasedConstraint - {col} has incorrect datatype"] = df.filter(
                     ~df[col].cast("string").isNotNull()
                 )
 
@@ -211,26 +247,26 @@ def extract_problematic_rows(df, validation_result):
         #     problems["Duplicate NAME entries"] = detect_duplicates(df)
 
         elif constraint.startswith("UniquenessConstraint"):
-            problems["Duplicate CODE entries"] = detect_duplicates(df)
+            problems["UniquenessConstraint - Duplicate CODE entries"] = detect_duplicates(df)
 
         elif constraint.startswith("PatternMatchConstraint") and "HIERARCHY" in constraint:
-            problems["Incorrect HIERARCHY pattern"] = df.filter(
+            problems["PatternMatchConstraint - Incorrect HIERARCHY pattern"] = df.filter(
                 ~F.col("HIERARCHY").rlike(r"^ALL#.*#.*")
             )
 
         elif constraint.startswith("ComplianceConstraint") and "Country-level hierarchy should have 3 #s" in constraint:
-            problems["Incorrect COUNTRY level hierarchy structure"] = df.filter(
+            problems["ComplianceConstraint - Incorrect COUNTRY level hierarchy structure"] = df.filter(
                 (F.col("LEVEL_NAME") == "COUNTRY") &
                 (F.size(F.split(F.col("HIERARCHY"), "#")) != 4)
             )
 
         elif constraint.startswith("ComplianceConstraint") and "LEVEL_NUMBER matches # after PARENT" in constraint:
-            problems["LEVEL_NUMBER mismatch with HIERARCHY after PARENT"] = df_with_count.filter(
+            problems["ConsistencyConstraint - LEVEL_NUMBER mismatch with HIERARCHY after PARENT"] = df_with_count.filter(
                 (F.col("count_after_parent").isNotNull()) &
                 (F.col("LEVEL_NUMBER") != F.col("count_after_parent")) & (F.col("LEVEL_NAME") != "CONTINENT")
             )
 
-        elif constraint.startswith("ComplianceConstraint") and "Missing hierarchies" in constraint:
+        elif constraint.startswith("ComplianceConstraint") and "Missing HIERARCHY" in constraint:
             df_with_parent = df.withColumn(
                 "parent_hierarchy",
                 F.expr("regexp_replace(HIERARCHY, '#[^#]+$', '')")
@@ -238,21 +274,21 @@ def extract_problematic_rows(df, validation_result):
 
             df_parents = df.select(F.col("HIERARCHY").alias("existing_hierarchy"))
 
-            problems["Orphan hierarchies (parent missing)"] = df_with_parent.join(
+            problems["ConsistencyConstraint - Orphan hierarchies (parent missing)"] = df_with_parent.join(
                 df_parents,
                 df_with_parent["parent_hierarchy"] == df_parents["existing_hierarchy"],
                 how="left_anti"
             ).drop("parent_hierarchy")
 
         elif constraint.startswith("ComplianceConstraint") and "Rows directly under WORLD should be CONTINENT level" in constraint:
-            problems["Non-CONTINENT rows directly under WORLD"] = df.filter(
+            problems["ComplianceConstraint - Non-CONTINENT rows directly under WORLD"] = df.filter(
                 (F.col("HIERARCHY").startswith("ALL#WORLD#")) &
                 (F.size(F.split(F.col("HIERARCHY"), "#")) == 3) &
                 (F.col("LEVEL_NAME") != "CONTINENT")
             )
             
         elif constraint.startswith("ComplianceConstraint") and ("If IS_GROUP is true then CHILDREN must not be NULL") in constraint:
-            problems["CHILDREN NULL"] = df.filter(
+            problems["ConsistencyConstraint - CHILDREN NULL"] = df.filter(
                 (F.col("IS_GROUP") == True) & (
                     F.col("CHILDREN").isNull() |
                     (F.trim(F.col("CHILDREN")) == "") |
@@ -260,7 +296,7 @@ def extract_problematic_rows(df, validation_result):
                 )
             )
         elif constraint.startswith("ComplianceConstraint") and ("If IS_GROUP is true then CHILDREN must not be empty") in constraint:
-            problems["CHILDREN NULL"] = df.filter(
+            problems["ConsistencyConstraint - CHILDREN NULL"] = df.filter(
                 (F.col("IS_GROUP") == True) & (
                     F.col("CHILDREN").isNull() |
                     (F.trim(F.col("CHILDREN")) == "") |
@@ -283,7 +319,8 @@ def deequ_quality_check(spark, df):
     for problem_name, problem_df in problems.items():
         print(f"\n🔎 Problem detected: {problem_name}")
         problem_df.show(truncate=False)
-        problem_df = problem_df.withColumn("problem_name", F.lit(problem_name))
+        # problem_df = problem_df.withColumn("problem_name", F.lit(problem_name))
+        problem_df = problem_df.select("NAME", "CODE", "HIERARCHY", "IS_GROUP", "CHILDREN", "LEVEL_NAME", "PARENT", "LEVEL_NUMBER", "OFFICIAL_LEVEL_NAME")
         problem_df.coalesce(1).write.csv(f"data/problems/problem_{problem_name}", header=True, mode="overwrite")
         output_path = f"data/problems/problem_{problem_name}"
         # Construct the full path to the part file
@@ -321,17 +358,70 @@ def deequ_quality_check(spark, df):
     
     return problems
 
-import glob
-import shutil
+def import_data_from_path(spark, path):
+    # spark = spark_session()
+    df = spark.read.option("header", True) \
+                   .option("inferSchema", True) \
+                    .option("quote", '"') \
+                    .option("escape", '"') \
+                    .option("multiLine", True) \
+                    .option("mode", "PERMISSIVE") \
+                    .csv(path, header=True)
+    return df
+
 if __name__ == "__main__":
     spark = spark_session()
     spark.sparkContext.setLogLevel("ERROR")
     df = import_data(spark)
+
     values_to_remove = ["ALL", "WORLD"]
     df = df.filter(~df["CODE"].isin(values_to_remove))
     # data_validation(spark, df)
     test = data_validation(spark, df)
     problems = extract_problematic_rows(df, test)
+    
+    # Display or export each issue separately
+    # for problem_name, problem_df in problems.items():
+    #     print(f"\n🔎 Problem detected: {problem_name}")
+    #     problem_df.show(truncate=False)
+    #     shutil.rmtree("data/problems")
+    #     os.makedirs("data/problems", exist_ok=True)
+    #     # problem_df = problem_df.withColumn("problem_name", F.lit(problem_name))
+    #     problem_df = problem_df.select("NAME", "CODE", "HIERARCHY", "IS_GROUP", "CHILDREN", "LEVEL_NAME")
+    #     problem_df.coalesce(1).write.csv(f"data/problems/problem_{problem_name}", header=True, mode="overwrite")
+    #     output_path = f"data/problems/problem_{problem_name}"
+    #     # Construct the full path to the part file
+    #     part_file_path = os.path.join(output_path, "part-00000-*")
+    #     custom_file_name = f"{problem_name}.csv"
+    #     matching_files = glob.glob(part_file_path)
+
+    #     if matching_files:
+    #         source_file = matching_files[0]
+    #         destination_file = os.path.join("data/problems/", custom_file_name)
+
+    #         # Check if the destination file already exists
+    #         if os.path.exists(destination_file):
+    #             try:
+    #                 os.remove(destination_file)
+    #                 print(f"Existing file '{destination_file}' overwritten.")
+    #             except OSError as e:
+    #                 print(f"Error: Could not delete existing file '{destination_file}': {e}")
+    #                 # You might want to handle this error more gracefully, e.g., skip renaming
+    #                 exit(1)  # Or some other error handling
+    #         try:
+    #             os.rename(source_file, destination_file)
+    #             print(f"Renamed '{source_file}' to '{destination_file}'")
+    #         except OSError as e:
+    #             print(f"Error: Could not rename file '{source_file}' to '{destination_file}': {e}")
+
+
+    #         # Optionally, remove the empty folder created by Spark
+    #         try:
+    #             shutil.rmtree(output_path)
+    #         except OSError as e:
+    #             print(f"Warning: Could not remove the output directory '{output_path}'. It might not be empty: {e}")
+    #     else:
+    #         print(f"Error: No part file found in '{output_path}'.")
 
     # Display or export each issue separately
     for problem_name, problem_df in problems.items():
