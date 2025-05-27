@@ -41,14 +41,9 @@ def extract_type(constraint):
     if str(constraint).startswith("UniquenessConstraint"):
         return "NAME"
     for t in types:
-        if re.search(rf"\b{t}\b", str(constraint)):
+        if re.search(rf"\b{t}\b", str(constraint), re.IGNORECASE):
             return t
     return None
-# def extract_type(constraint):
-#     for t in types:
-#         if re.search(rf"\b{t}\b", str(constraint)):
-#             return t
-#     return None
 
 merged_df["COLUMN_PROBLEM"] = merged_df["PROBLEM"].apply(extract_type)
 

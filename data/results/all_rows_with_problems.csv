@@ -45,50 +45,50 @@ Benelux,BENLUX,ALL#WORLD#EUR#BENLUX,True,"[
 "  \""ROTTE\""",,,,,,,,,CompletenessConstraint - Null values in PARENT,PARENT
 "  \""GHENT\""",,,,,,,,,CompletenessConstraint - Null values in PARENT,PARENT
 "]""",,,,,,,,,CompletenessConstraint - Null values in PARENT,PARENT
-Azerbaijan,AZE,ALL#WORLD#AZE,False,,COUNTRY,Asia,0.0,COUNTRY,ComplianceConstraint - Incorrect COUNTRY level hierarchy structure,
+Azerbaijan,AZE,ALL#WORLD#AZE,False,,COUNTRY,Asia,0.0,COUNTRY,ComplianceConstraint - Incorrect COUNTRY level hierarchy structure,HIERARCHY
 Azerbaijan,AZE,ALL#WORLD#AZE,False,,COUNTRY,Asia,0.0,COUNTRY,ComplianceConstraint - Non-CONTINENT rows directly under WORLD,
 US/SAM/SAF,SAM_EU,US_SAM_SAF,True,[],,,,,ConsistencyConstraint - CHILDREN NULL,CHILDREN
 SAM/EU,SAM_EU,SAM_EU,True,[],,,,,ConsistencyConstraint - CHILDREN NULL,CHILDREN
 "Nigeria, Ghana and Cameroon",NGAGHACMR,ALL#WORLD#AFR#NGAGHACMR,True,[],,,,,ConsistencyConstraint - CHILDREN NULL,CHILDREN
 INDIANA,INDIA,ALL#WORLD#NOAME#USA#EASCB#INDIA,False,,STATE,USA,3.0,COUNTY,ConsistencyConstraint - LEVEL_NUMBER mismatch with HIERARCHY after PARENT,HIERARCHY
-Monastir,MON,ALL#WORLD#AFR#TUN#MON,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Sfax,PORT_TNSFA,ALL#WORLD#AFR#TUN#PORT_TNSFA,False,,PORT_TERMINAL,TUN,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Dover,DOVER,ALL#WORLD#EUR#GBR#ENG#DOVER,False,,CITY,GBR,2.0,COUNTY,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Menzel Bourguiba,PORT_TNMBA,ALL#WORLD#AFR#TUN#PORT_TNMBA,False,,PORT_TERMINAL,TUN,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Zarzis,PORT_TNZRZ,ALL#WORLD#AFR#TUN#PORT_TNZRZ,False,,PORT_TERMINAL,TUN,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Sousse,PORT_TNSUS,ALL#WORLD#AFR#TUN#PORT_TNSUS,False,,PORT_TERMINAL,TUN,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Gafsa,GAF,ALL#WORLD#AFR#TUN#GAF,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Nabeul,NAB,ALL#WORLD#AFR#TUN#NAB,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Gabes,PORT_TNGAE,ALL#WORLD#AFR#TUN#PORT_TNGAE,False,,PORT_TERMINAL,TUN,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Port of Spain,PORT_SPA,ALL#WORLD#NOAME#TTO#PORT_SPA,False,,PORT_TERMINAL,TTO,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Ariana,ARI,ALL#WORLD#AFR#TUN#ARI,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Manouba,MAN,ALL#WORLD#AFR#TUN#MAN,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Kairouan,KAI,ALL#WORLD#AFR#TUN#KAI,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Gabes,GABE,ALL#WORLD#AFR#TUN#GABE,False,,CITY,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Medenine,MED,ALL#WORLD#AFR#TUN#MED,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Zaghouan,ZAGH,ALL#WORLD#AFR#TUN#ZAGH,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Mahdia,MAH,ALL#WORLD#AFR#TUN#MAH,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Rades,PORT_TNRDS,ALL#WORLD#AFR#TUN#PORT_TNRDS,False,,PORT_TERMINAL,TUN,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Tunis,TUNIS,ALL#WORLD#AFR#TUN#TUNIS,False,,CITY,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Le Kef,LKE,ALL#WORLD#AFR#TUN#LKE,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Siliana,SIL,ALL#WORLD#AFR#TUN#SIL,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Ben Arous,BENAR,ALL#WORLD#AFR#TUN#BENAR,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Rades,RADE,ALL#WORLD#AFR#TUN#RADE,False,,CITY,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Tozeur,TOE,ALL#WORLD#AFR#TUN#TOE,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Sidi Bouz,SIDI,ALL#WORLD#AFR#TUN#SIDI,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Jendouba,JEN,ALL#WORLD#AFR#TUN#JEN,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Beja,BEJ,ALL#WORLD#AFR#TUN#BEJ,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Bizerte,PORT_TNBIZ,ALL#WORLD#AFR#TUN#PORT_TNBIZ,False,,PORT_TERMINAL,TUN,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Bizerte,BIZE,ALL#WORLD#AFR#TUN#BIZE,False,,CITY,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Sfax,SFAX,ALL#WORLD#AFR#TUN#SFAX,False,,CITY,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Grimsby,GRMBSY,ALL#WORLD#EUR#GBR#ENG#GRMBSY,False,,CITY,GBR,2.0,COUNTY,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Tataouine,TAT,ALL#WORLD#AFR#TUN#TAT,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Goulette,PORT_TNLGO,ALL#WORLD#AFR#TUN#PORT_TNLGO,False,,PORT_TERMINAL,TUN,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Zarzis,ZARZIS,ALL#WORLD#AFR#TUN#ZARZIS,False,,CITY,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Kebili,KEB,ALL#WORLD#AFR#TUN#KEB,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Sousse,SOUS,ALL#WORLD#AFR#TUN#SOUS,False,,CITY,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Kasserine,KAS,ALL#WORLD#AFR#TUN#KAS,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchies (parent missing),
-Azerbaijan,AZE,ALL#WORLD#AZE,False,,COUNTRY,Asia,0.0,COUNTRY,ConsistencyConstraint - Orphan hierarchies (parent missing),
+Monastir,MON,ALL#WORLD#AFR#TUN#MON,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Sfax,PORT_TNSFA,ALL#WORLD#AFR#TUN#PORT_TNSFA,False,,PORT_TERMINAL,TUN,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Dover,DOVER,ALL#WORLD#EUR#GBR#ENG#DOVER,False,,CITY,GBR,2.0,COUNTY,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Menzel Bourguiba,PORT_TNMBA,ALL#WORLD#AFR#TUN#PORT_TNMBA,False,,PORT_TERMINAL,TUN,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Zarzis,PORT_TNZRZ,ALL#WORLD#AFR#TUN#PORT_TNZRZ,False,,PORT_TERMINAL,TUN,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Sousse,PORT_TNSUS,ALL#WORLD#AFR#TUN#PORT_TNSUS,False,,PORT_TERMINAL,TUN,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Gafsa,GAF,ALL#WORLD#AFR#TUN#GAF,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Nabeul,NAB,ALL#WORLD#AFR#TUN#NAB,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Gabes,PORT_TNGAE,ALL#WORLD#AFR#TUN#PORT_TNGAE,False,,PORT_TERMINAL,TUN,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Port of Spain,PORT_SPA,ALL#WORLD#NOAME#TTO#PORT_SPA,False,,PORT_TERMINAL,TTO,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Ariana,ARI,ALL#WORLD#AFR#TUN#ARI,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Manouba,MAN,ALL#WORLD#AFR#TUN#MAN,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Kairouan,KAI,ALL#WORLD#AFR#TUN#KAI,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Gabes,GABE,ALL#WORLD#AFR#TUN#GABE,False,,CITY,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Medenine,MED,ALL#WORLD#AFR#TUN#MED,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Zaghouan,ZAGH,ALL#WORLD#AFR#TUN#ZAGH,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Mahdia,MAH,ALL#WORLD#AFR#TUN#MAH,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Rades,PORT_TNRDS,ALL#WORLD#AFR#TUN#PORT_TNRDS,False,,PORT_TERMINAL,TUN,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Tunis,TUNIS,ALL#WORLD#AFR#TUN#TUNIS,False,,CITY,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Le Kef,LKE,ALL#WORLD#AFR#TUN#LKE,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Siliana,SIL,ALL#WORLD#AFR#TUN#SIL,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Ben Arous,BENAR,ALL#WORLD#AFR#TUN#BENAR,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Rades,RADE,ALL#WORLD#AFR#TUN#RADE,False,,CITY,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Tozeur,TOE,ALL#WORLD#AFR#TUN#TOE,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Sidi Bouz,SIDI,ALL#WORLD#AFR#TUN#SIDI,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Jendouba,JEN,ALL#WORLD#AFR#TUN#JEN,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Beja,BEJ,ALL#WORLD#AFR#TUN#BEJ,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Bizerte,PORT_TNBIZ,ALL#WORLD#AFR#TUN#PORT_TNBIZ,False,,PORT_TERMINAL,TUN,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Bizerte,BIZE,ALL#WORLD#AFR#TUN#BIZE,False,,CITY,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Sfax,SFAX,ALL#WORLD#AFR#TUN#SFAX,False,,CITY,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Grimsby,GRMBSY,ALL#WORLD#EUR#GBR#ENG#GRMBSY,False,,CITY,GBR,2.0,COUNTY,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Tataouine,TAT,ALL#WORLD#AFR#TUN#TAT,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Goulette,PORT_TNLGO,ALL#WORLD#AFR#TUN#PORT_TNLGO,False,,PORT_TERMINAL,TUN,1.0,PORT_TERMINAL,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Zarzis,ZARZIS,ALL#WORLD#AFR#TUN#ZARZIS,False,,CITY,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Kebili,KEB,ALL#WORLD#AFR#TUN#KEB,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Sousse,SOUS,ALL#WORLD#AFR#TUN#SOUS,False,,CITY,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Kasserine,KAS,ALL#WORLD#AFR#TUN#KAS,False,,REGION,TUN,1.0,GOVERNORATE,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
+Azerbaijan,AZE,ALL#WORLD#AZE,False,,COUNTRY,Asia,0.0,COUNTRY,ConsistencyConstraint - Orphan hierarchy (parent missing),HIERARCHY
 US/SAM/SAF,SAM_EU,US_SAM_SAF,True,[],,,,,PatternMatchConstraint - Incorrect HIERARCHY pattern,HIERARCHY
 SAM/EU,SAM_EU,SAM_EU,True,[],,,,,PatternMatchConstraint - Incorrect HIERARCHY pattern,HIERARCHY
 ,IND_OCE,IND_OCE,False,,REGION,,,,PatternMatchConstraint - Incorrect HIERARCHY pattern,HIERARCHY

@@ -274,7 +274,7 @@ def extract_problematic_rows(df, validation_result):
 
             df_parents = df.select(F.col("HIERARCHY").alias("existing_hierarchy"))
 
-            problems["ConsistencyConstraint - Orphan hierarchies (parent missing)"] = df_with_parent.join(
+            problems["ConsistencyConstraint - Orphan hierarchy (parent missing)"] = df_with_parent.join(
                 df_parents,
                 df_with_parent["parent_hierarchy"] == df_parents["existing_hierarchy"],
                 how="left_anti"
@@ -422,7 +422,16 @@ if __name__ == "__main__":
     #             print(f"Warning: Could not remove the output directory '{output_path}'. It might not be empty: {e}")
     #     else:
     #         print(f"Error: No part file found in '{output_path}'.")
-
+    if problems:
+        problems_dir = "data/problems"
+        if os.path.exists(problems_dir):
+            for filename in os.listdir(problems_dir):
+                file_path = os.path.join(problems_dir, filename)
+                try:
+                    if os.path.isfile(file_path):
+                        os.remove(file_path)
+                except Exception as e:
+                    print(f"Error deleting file {file_path}: {e}")
     # Display or export each issue separately
     for problem_name, problem_df in problems.items():
         print(f"\n🔎 Problem detected: {problem_name}")
