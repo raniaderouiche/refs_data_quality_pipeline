@@ -1,0 +1,23 @@
+paths:
+  data_dir: "data"
+  locations_raw_path: "data/DNEXR.REFERENCE.location.csv"
+  checks_history: "data/results/check_history.csv"
+  deequ_verif_result_path: "data/results/deequ_verif_result_locations.csv"
+  problems_dir: "data/problems"
+  results_dir: "data/results"
+  duplicates_path: "data/results/duplicates.csv"
+  outliers_path: "data/results/outlier_locations.csv"
+  rows_with_problems_path: "data/results/all_rows_with_problems.csv" #problems detected by deequ + duplicates + outliers
+  locations_processed_path: "data/results/locations_with_official_level_names.csv" #final data after processing
+  deequ_verif_suite_dir : "data/verif_result" # Directory for Deequ verification results export by spark
+  continents_path: "data/results/continents.csv"
+  processed_final_levels_path : "data/processed_final_levels.json" #scraped dataset with country names and official level names
+  df_countries_with_continents_path : "data/results/df_countries_with_continents.csv"
+  countries_with_continents_not_found_path : "data/results/countries_with_continents_not_found.csv"
+
+
+
+
+spark:
+  master: "local[*]"
+  app_name: "MySparkApp"

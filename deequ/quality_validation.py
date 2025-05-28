@@ -17,6 +17,17 @@ import shutil
 from pyspark.sql import functions as F
 from pyspark.sql import types as T
 from pyspark.sql.types import StringType, BooleanType, IntegerType, ArrayType
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from utils.config_loader import load_config
+
+config = load_config()
+problems_dir = config["paths"]["problems_dir"]
+results_dir = config["paths"]["results_dir"]
+locations_processed_path = config["paths"]["locations_processed_path"]
+deequ_verif_suite_dir = config["paths"]["deequ_verif_suite_dir"]
+data_dir = config["paths"]["data_dir"]
+deequ_verif_result_path = config["paths"]["deequ_verif_result_path"]
 
 def spark_session():
     spark = SparkSession.builder.appName("deequ").config("spark.jars.packages", "com.amazon.deequ:deequ:2.0.9-spark-3.5") \
@@ -31,19 +42,19 @@ def import_data(spark):
                     .option("escape", '"') \
                     .option("multiLine", True) \
                     .option("mode", "PERMISSIVE") \
-                    .csv("data/results/locations_with_official_level_names.csv", header=True)
+                    .csv(f"../{locations_processed_path}", header=True)
     return df
 
-def shorten_hierarchy(df):
-    df = spark.createDataFrame(df)
+# def shorten_hierarchy(df):
+#     df = spark.createDataFrame(df)
 
-    df = df.withColumn("HIERARCHY_short", regexp_replace("HIERARCHY", r"#([^#]+)$", ""))
+#     df = df.withColumn("HIERARCHY_short", regexp_replace("HIERARCHY", r"#([^#]+)$", ""))
     
-    try:
-        # df.write.csv("file:///C:/Users/Rania/Documents/PFE/refs_data_quality_pipeline/data/processed", header=True, mode="overwrite")
-        return df
-    except Exception as e:
-        print(f"Error writing CSV file: {e}")
+#     try:
+#         # df.write.csv("file:///C:/Users/Rania/Documents/PFE/refs_data_quality_pipeline/data/processed", header=True, mode="overwrite")
+#         return df
+#     except Exception as e:
+#         print(f"Error writing CSV file: {e}")
 
 def data_check_warning(spark, df):
     check = Check(spark, CheckLevel.Warning, "Data Quality Checks Warning")
@@ -134,9 +145,9 @@ def detect_wrong_country_hierarchy(df):
     return problematic_rows
 
 def save_deequ_verif_suite(verificationResult_df):
-    verificationResult_df.coalesce(1).write.csv("file:///C:/Users/Rania/Documents/PFE/refs_data_quality_pipeline/data/verif_result", header=True, mode="overwrite")
+    verificationResult_df.coalesce(1).write.csv(f"../{deequ_verif_suite_dir}", header=True, mode="overwrite")
 
-    output_path = f"data/verif_result"
+    output_path = f"../{deequ_verif_suite_dir}"
     file_name = "deequ_verif_result"
 
     # Construct the full path to the part file
@@ -146,7 +157,7 @@ def save_deequ_verif_suite(verificationResult_df):
 
     if matching_files:
         source_file = matching_files[0]
-        destination_file = os.path.join("data/results/", custom_file_name)
+        destination_file = os.path.join(f"../{results_dir}", custom_file_name)
 
         # Step 1: Delete the existing file (if it exists)
         if os.path.exists(destination_file):
@@ -312,82 +323,15 @@ def deequ_quality_check(spark, df):
     values_to_remove = ["ALL", "WORLD"]
     df = df.filter(~df["CODE"].isin(values_to_remove))
     # data_validation(spark, df)
-    test = data_validation(spark, df)
-    problems = extract_problematic_rows(df, test)
+    report = data_validation(spark, df)
+    problems = extract_problematic_rows(df, report)
 
-    # Display or export each issue separately
-    for problem_name, problem_df in problems.items():
-        print(f"\n🔎 Problem detected: {problem_name}")
-        problem_df.show(truncate=False)
-        # problem_df = problem_df.withColumn("problem_name", F.lit(problem_name))
-        problem_df = problem_df.select("NAME", "CODE", "HIERARCHY", "IS_GROUP", "CHILDREN", "LEVEL_NAME", "PARENT", "LEVEL_NUMBER", "OFFICIAL_LEVEL_NAME")
-        problem_df.coalesce(1).write.csv(f"data/problems/problem_{problem_name}", header=True, mode="overwrite")
-        output_path = f"data/problems/problem_{problem_name}"
-        # Construct the full path to the part file
-        part_file_path = os.path.join(output_path, "part-00000-*")
-        custom_file_name = f"{problem_name}.csv"
-        matching_files = glob.glob(part_file_path)
-
-        if matching_files:
-            source_file = matching_files[0]
-            destination_file = os.path.join("data/problems/", custom_file_name)
-
-            # Check if the destination file already exists
-            if os.path.exists(destination_file):
-                try:
-                    os.remove(destination_file)
-                    print(f"Existing file '{destination_file}' overwritten.")
-                except OSError as e:
-                    print(f"Error: Could not delete existing file '{destination_file}': {e}")
-                    # You might want to handle this error more gracefully, e.g., skip renaming
-                    exit(1)  # Or some other error handling
-            try:
-                os.rename(source_file, destination_file)
-                print(f"Renamed '{source_file}' to '{destination_file}'")
-            except OSError as e:
-                print(f"Error: Could not rename file '{source_file}' to '{destination_file}': {e}")
-
-
-            # Optionally, remove the empty folder created by Spark
-            try:
-                shutil.rmtree(output_path)
-            except OSError as e:
-                print(f"Warning: Could not remove the output directory '{output_path}'. It might not be empty: {e}")
-        else:
-            print(f"Error: No part file found in '{output_path}'.")
-    
-    return problems
-
-def import_data_from_path(spark, path):
-    # spark = spark_session()
-    df = spark.read.option("header", True) \
-                   .option("inferSchema", True) \
-                    .option("quote", '"') \
-                    .option("escape", '"') \
-                    .option("multiLine", True) \
-                    .option("mode", "PERMISSIVE") \
-                    .csv(path, header=True)
-    return df
-
-if __name__ == "__main__":
-    spark = spark_session()
-    spark.sparkContext.setLogLevel("ERROR")
-    df = import_data(spark)
-
-    values_to_remove = ["ALL", "WORLD"]
-    df = df.filter(~df["CODE"].isin(values_to_remove))
-    # data_validation(spark, df)
-    test = data_validation(spark, df)
-    problems = extract_problematic_rows(df, test)
-    
     # Display or export each issue separately
     # for problem_name, problem_df in problems.items():
     #     print(f"\n🔎 Problem detected: {problem_name}")
     #     problem_df.show(truncate=False)
-    #     shutil.rmtree("data/problems")
-    #     os.makedirs("data/problems", exist_ok=True)
     #     # problem_df = problem_df.withColumn("problem_name", F.lit(problem_name))
-    #     problem_df = problem_df.select("NAME", "CODE", "HIERARCHY", "IS_GROUP", "CHILDREN", "LEVEL_NAME")
+    #     problem_df = problem_df.select("NAME", "CODE", "HIERARCHY", "IS_GROUP", "CHILDREN", "LEVEL_NAME", "PARENT", "LEVEL_NUMBER", "OFFICIAL_LEVEL_NAME")
     #     problem_df.coalesce(1).write.csv(f"data/problems/problem_{problem_name}", header=True, mode="overwrite")
     #     output_path = f"data/problems/problem_{problem_name}"
     #     # Construct the full path to the part file
@@ -422,6 +366,31 @@ if __name__ == "__main__":
     #             print(f"Warning: Could not remove the output directory '{output_path}'. It might not be empty: {e}")
     #     else:
     #         print(f"Error: No part file found in '{output_path}'.")
+    
+    return report, problems
+
+def import_data_from_path(spark, path):
+    # spark = spark_session()
+    df = spark.read.option("header", True) \
+                   .option("inferSchema", True) \
+                    .option("quote", '"') \
+                    .option("escape", '"') \
+                    .option("multiLine", True) \
+                    .option("mode", "PERMISSIVE") \
+                    .csv(path, header=True)
+    return df
+
+if __name__ == "__main__":
+    spark = spark_session()
+    spark.sparkContext.setLogLevel("ERROR")
+    df = import_data(spark)
+    values_to_remove = ["ALL", "WORLD"]
+    df = df.filter(~df["CODE"].isin(values_to_remove))
+    # data_validation(spark, df)
+    test = data_validation(spark, df)
+    test.show(truncate=False)
+    problems = extract_problematic_rows(df, test)
+    print("problems: ", problems)
     if problems:
         problems_dir = "data/problems"
         if os.path.exists(problems_dir):

@@ -4,6 +4,19 @@ import pycountry_convert as pc
 from fuzzywuzzy import process
 import pycountry
 from fuzzywuzzy import process, fuzz
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from utils.config_loader import load_config
+
+config = load_config()
+locations_raw_path = config["paths"]["locations_raw_path"]
+continents_path = config["paths"]["continents_path"]
+locations_processed_path = config["paths"]["locations_processed_path"]
+countries_with_continents_not_found_path = config["paths"]["countries_with_continents_not_found_path"]
+df_countries_with_continents_path = config["paths"]["df_countries_with_continents_path"]
+outliers_path = config["paths"]["outliers_path"]
+processed_final_levels_path = config["paths"]["processed_final_levels_path"]
 
 def preprocess_continents():
     continent_list = ["Africa", "Antarctica", "Asia", "Europe", "North America", "Oceania", "South America"]
@@ -19,7 +32,7 @@ def preprocess_continents():
         # return matching_rows
         return pd.DataFrame(matching_rows)
 
-    df = pd.read_csv('../data/DNEXR.REFERENCE.location.csv')
+    df = pd.read_csv(f"../{locations_raw_path}", encoding='utf-8')
 
     df = df[df['IS_GROUP'] == False]
     data = df[(df['HIERARCHY'].str.startswith("ALL#WORLD")) & (df['HIERARCHY'].str.count("#") == 2) & (df['LEVEL_NAME']== 'REGION')]
@@ -48,15 +61,15 @@ def preprocess_continents():
     continents["NAME"] = continents["NAME"].str.title()
     df = df[~df['CODE'].isin(continents['CODE'])]
 
-    continents.to_csv('../data/results/continents.csv', index=False, encoding='utf-8')
+    continents.to_csv(f"../{continents_path}", index=False, encoding='utf-8')
     return continents, df
 
 
 def assign_country_to_correct_continent(continents, df):
-    with open('../data/processed_final_levels.json', encoding='utf-8') as f1:
+    with open(f"../{processed_final_levels_path}", encoding='utf-8') as f1:
         levels_reference = json.load(f1)
 
-    df = pd.read_csv('../data/DNEXR.REFERENCE.location.csv')
+    # df = pd.read_csv(f"../{locations_raw_path}")
     continent_list = ["Africa", "Antarctica", "Asia", "Europe", "North America", "Oceania", "South America"]
 
     df_countries = df[df['LEVEL_NAME'] == "COUNTRY"]
@@ -97,8 +110,8 @@ def assign_country_to_correct_continent(continents, df):
     countries_with_continents_not_found = df_countries[~df_countries['CONTINENT'].isin(continent_list)]
     df_countries_with_continents = df_countries[~df_countries['CODE'].isin(countries_with_continents_not_found['CODE'])]
     
-    df_countries_with_continents.to_csv('../data/results/df_countries_with_continents.csv', index=False, encoding='utf-8')
-    countries_with_continents_not_found.to_csv('../data/results/countries_with_continents_not_found.csv', index=False, encoding='utf-8')
+    df_countries_with_continents.to_csv(f"../{df_countries_with_continents_path}", index=False, encoding='utf-8')
+    countries_with_continents_not_found.to_csv(f"../{countries_with_continents_not_found_path}", index=False, encoding='utf-8')
 
     return df_countries_with_continents, df, continents
 
@@ -113,7 +126,7 @@ def correcting_hierarchies(continents, df_countries_with_continents, df):
 
 def add_parent_column(countries_with_corrected_hierarchies,continents, df):
 
-    countries_with_continents_not_found = pd.read_csv('../data/results/countries_with_continents_not_found.csv', encoding='utf-8')
+    countries_with_continents_not_found = pd.read_csv(f"../{countries_with_continents_not_found_path}", encoding='utf-8')
 
     codes_to_remove = set(continents['CODE']).union(set(countries_with_continents_not_found['CODE'])).union(set(countries_with_corrected_hierarchies['CODE']))
 
@@ -213,16 +226,16 @@ def merging(df, countries_with_corrected_hierarchies, continents):
 
     locations_processed.update(ports)
 
-    data_raw = pd.read_csv('../data/DNEXR.REFERENCE.location.csv')
+    data_raw = pd.read_csv(f"../{locations_raw_path}")
 
     # Find rows in data_raw whose CODE does not exist in locations
     missing_in_locations = data_raw[~data_raw['CODE'].isin(locations_processed['CODE'])]
-    missing_in_locations.to_csv('../data/results/outlier_locations.csv', index=False, encoding='utf-8')
+    missing_in_locations.to_csv(f"../{outliers_path}", index=False, encoding='utf-8')
 
     return locations_processed, missing_in_locations
 
 def adding_official_level_names(main_df):
-    with open('../data/processed_final_levels.json', encoding='utf-8') as f1:
+    with open(f"../{processed_final_levels_path}", encoding='utf-8') as f1:
         admin_data = json.load(f1)
 
     # 1. Build code → country name (if needed)
@@ -290,5 +303,5 @@ def adding_official_level_names(main_df):
             return valid_levels[0].upper()
     
     main_df['OFFICIAL_LEVEL_NAME'] = main_df.apply(standardize_level, axis=1)
-    main_df.to_csv('../data/results/locations_with_official_level_names.csv', index=False, encoding='utf-8')
+    main_df.to_csv(f"../{locations_processed_path}", index=False, encoding='utf-8')
     return main_df

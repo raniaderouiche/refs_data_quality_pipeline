@@ -7,22 +7,22 @@ Data Quality Checks Errors,Error,Error,"AnalysisBasedConstraint(DataType(PARENT,
 Data Quality Checks Errors,Error,Error,"AnalysisBasedConstraint(DataType(OFFICIAL_LEVEL_NAME,None),<function1>,Some(<function1>),None)",Success,""
 Data Quality Checks Errors,Error,Error,"AnalysisBasedConstraint(DataType(IS_GROUP,None),<function1>,Some(<function1>),None)",Success,""
 Data Quality Checks Errors,Error,Error,"AnalysisBasedConstraint(DataType(LEVEL_NUMBER,None),<function1>,Some(<function1>),None)",Success,""
-Data Quality Checks Errors,Error,Error,"CompletenessConstraint(Completeness(NAME,None,None))",Failure,Value: 0.9999179251477347 does not meet the constraint requirement!
+Data Quality Checks Errors,Error,Error,"CompletenessConstraint(Completeness(NAME,None,None))",Success,""
 Data Quality Checks Errors,Error,Error,"CompletenessConstraint(Completeness(CODE,None,None))",Success,""
 Data Quality Checks Errors,Error,Error,"CompletenessConstraint(Completeness(HIERARCHY,None,None))",Success,""
-Data Quality Checks Errors,Error,Error,"CompletenessConstraint(Completeness(LEVEL_NAME,None,None))",Failure,Value: 0.9996717005909389 does not meet the constraint requirement!
-Data Quality Checks Errors,Error,Error,"CompletenessConstraint(Completeness(OFFICIAL_LEVEL_NAME,None,None))",Failure,Value: 0.9994254760341431 does not meet the constraint requirement!
-Data Quality Checks Errors,Error,Error,"CompletenessConstraint(Completeness(PARENT,None,None))",Failure,Value: 0.9994254760341431 does not meet the constraint requirement!
-Data Quality Checks Errors,Error,Error,"CompletenessConstraint(Completeness(LEVEL_NUMBER,None,None))",Failure,Value: 0.9994254760341431 does not meet the constraint requirement!
-Data Quality Checks Errors,Error,Error,"UniquenessConstraint(Uniqueness(List(CODE),None,None))",Failure,Value: 0.9998358502954695 does not meet the constraint requirement!
-Data Quality Checks Errors,Error,Error,"DistinctnessConstraint(Distinctness(Stream(NAME, ?),None))",Failure,Value: 0.8955101370762538 does not meet the constraint requirement!
+Data Quality Checks Errors,Error,Error,"CompletenessConstraint(Completeness(LEVEL_NAME,None,None))",Success,""
+Data Quality Checks Errors,Error,Error,"CompletenessConstraint(Completeness(OFFICIAL_LEVEL_NAME,None,None))",Success,""
+Data Quality Checks Errors,Error,Error,"CompletenessConstraint(Completeness(PARENT,None,None))",Success,""
+Data Quality Checks Errors,Error,Error,"CompletenessConstraint(Completeness(LEVEL_NUMBER,None,None))",Success,""
+Data Quality Checks Errors,Error,Error,"UniquenessConstraint(Uniqueness(List(CODE),None,None))",Success,""
+Data Quality Checks Errors,Error,Error,"DistinctnessConstraint(Distinctness(Stream(NAME, ?),None))",Failure,Value: 0.8954758190327613 does not meet the constraint requirement!
 Data Quality Checks Errors,Error,Error,"ApproxCountDistinctConstraint(ApproxCountDistinct(NAME,None))",Success,""
-Data Quality Checks Errors,Error,Error,"PatternMatchConstraint(HIERARCHY, ALL#.*#.*)",Failure,Value: 0.9995896257386737 does not meet the constraint requirement!
-Data Quality Checks Errors,Error,Error,"ComplianceConstraint(Compliance(Country-level hierarchy should have 3 #s,(LEVEL_NAME != 'COUNTRY') OR (size(split(HIERARCHY, '#')) = 4),None,List(),None))",Failure,Value: 0.9997537754432042 does not meet the constraint requirement!
-Data Quality Checks Errors,Error,Error,"ComplianceConstraint(Compliance(LEVEL_NUMBER matches # after PARENT,array_position(split(HIERARCHY, '#'), PARENT) IS NULL OR (size(slice(split(HIERARCHY, '#'), array_position(split(HIERARCHY, '#'), PARENT) + 1, 1000)) = LEVEL_NUMBER) AND (LEVEL_NAME != 'CONTINENT'),None,List(),None))",Failure,Value: 0.9798095863427446 does not meet the constraint requirement!
+Data Quality Checks Errors,Error,Error,"PatternMatchConstraint(HIERARCHY, ALL#.*#.*)",Success,""
+Data Quality Checks Errors,Error,Error,"ComplianceConstraint(Compliance(Country-level hierarchy should have 3 #s,(LEVEL_NAME != 'COUNTRY') OR (size(split(HIERARCHY, '#')) = 4),None,List(),None))",Success,""
+Data Quality Checks Errors,Error,Error,"ComplianceConstraint(Compliance(LEVEL_NUMBER matches # after PARENT,array_position(split(HIERARCHY, '#'), PARENT) IS NULL OR (size(slice(split(HIERARCHY, '#'), array_position(split(HIERARCHY, '#'), PARENT) + 1, 1000)) = LEVEL_NUMBER) AND (LEVEL_NAME != 'CONTINENT'),None,List(),None))",Failure,Value: 0.9797191887675507 does not meet the constraint requirement!
 Data Quality Checks Errors,Error,Error,"ComplianceConstraint(Compliance(Missing HIERARCHY,false,None,List(),None))",Failure,Value: 0.0 does not meet the constraint requirement!
-Data Quality Checks Errors,Error,Error,"ComplianceConstraint(Compliance(Rows directly under WORLD should be CONTINENT level,NOT (HIERARCHY LIKE 'ALL#WORLD#%' AND size(split(HIERARCHY, '#')) = 3) OR LEVEL_NAME = 'CONTINENT',None,List(),None))",Failure,Value: 0.9999179251477347 does not meet the constraint requirement!
+Data Quality Checks Errors,Error,Error,"ComplianceConstraint(Compliance(Rows directly under WORLD should be CONTINENT level,NOT (HIERARCHY LIKE 'ALL#WORLD#%' AND size(split(HIERARCHY, '#')) = 3) OR LEVEL_NAME = 'CONTINENT',None,List(),None))",Success,""
 Data Quality Checks Errors,Error,Error,"ComplianceConstraint(Compliance(If IS_GROUP is true then CHILDREN must not be NULL,NOT(IS_GROUP = true AND CHILDREN IS NULL),None,List(),None))",Success,""
-Data Quality Checks Errors,Error,Error,"ComplianceConstraint(Compliance(If IS_GROUP is true then CHILDREN must not be empty,NOT(CHILDREN IS NULL),None,List(),None))",Failure,Value: 3.2829940906106366E-4 does not meet the constraint requirement!
-Data Quality Checks Warning,Warning,Warning,"DistinctnessConstraint(Distinctness(Stream(NAME, ?),None))",Failure,Value: 0.8955101370762538 does not meet the constraint requirement!
+Data Quality Checks Errors,Error,Error,"ComplianceConstraint(Compliance(If IS_GROUP is true then CHILDREN must not be empty,NOT(CHILDREN IS NULL),None,List(),None))",Success,""
+Data Quality Checks Warning,Warning,Warning,"DistinctnessConstraint(Distinctness(Stream(NAME, ?),None))",Failure,Value: 0.8954758190327613 does not meet the constraint requirement!
 Data Quality Checks Warning,Warning,Warning,"ApproxCountDistinctConstraint(ApproxCountDistinct(NAME,None))",Success,""
